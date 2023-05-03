@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title %} 
+    My blog
+{% endblock %}
+
+{% block css_files %} 
+<link rel="stylesheet" href="{% static "blog/post.css"%}"/>
+<link rel="stylesheet" href="{% static "blog/index.css"%}"/>
+{% endblock %}
+
+{% block content %} 
+
+<section id="welcome">
+    <header>
+        <img src={% static "blog/images/chris.jpg" %} alt="Chris the author of this blog"/>
+        <h2>
+            CHRISTOPHER'S BLOG
+        </h2>
+    </header>
+    <p>Hi, I am Chris and welcome to my blog page, I love to talk about tech and biohacking</p>
+</section>
+<section id="all-posts">
+    <h2>
+        My Latest Thoughts
+    </h2>
+    <ul id="latest-posts">
+       
+        {% for post in posts %}
+        {% include "blog/includes/posts.html" %}
+        {% endfor %}
+                   
+    </ul>    
+</section>
+<section id="about">
+    <h2>
+        What I Do
+    </h2>
+    <p>
+        I love programming in python, I love loyalty and true friendships, also I love Nkwobi.
+
+    </p>
+    <p>
+        My Goal is to shame my enemies by achieving everything they said I could never have.
+    </p>
+</section>
+
+{% endblock %}
+
