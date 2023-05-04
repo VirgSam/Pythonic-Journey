@@ -21,6 +21,12 @@
         {{form.review}}
         {{form.review.errors}}
     </div>
+    <div class="form-control {% if form.ratings.errors %}errors{% endif %}">
+        {% csrf_token %}
+        {{form.ratings.label_tag}}
+        {{form.ratings}}
+        {{form.ratings.errors}}
+    </div>
         <button type="submit">Send</button>
     </form>
 </body>
