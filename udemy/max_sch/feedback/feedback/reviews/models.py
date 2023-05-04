@@ -4,4 +4,4 @@ from django.db import models
 class Review(models.Model):
     user_name=models.CharField(max_length=100)
     review =models.TextField()
-    ratings =models.IntegerField()
+    ratings =models.IntegerField() 
