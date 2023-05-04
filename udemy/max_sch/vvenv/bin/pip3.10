@@ -1,4 +1,4 @@
-#!/mnt/c/Users/chris/my_scripts/udemy_projects/max_sch/vvenv/bin/python3
+#!/mnt/c/Users/chris/my_scripts/forthehub/Pythonic-Journey/udemy/max_sch/vvenv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
