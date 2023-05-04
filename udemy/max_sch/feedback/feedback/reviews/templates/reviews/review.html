@@ -9,7 +9,7 @@
 </head>
 <body>
     <form action="/" method="POST">
-    <div class="form-control">
+    <div class="form-control {% if form.user_name.errors %}errors{% endif %}">
         {% csrf_token %}
         {{form.user_name.label_tag}}
         {{form.user_name}}
