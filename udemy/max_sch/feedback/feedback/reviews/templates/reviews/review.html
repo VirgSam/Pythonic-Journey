@@ -15,6 +15,12 @@
         {{form.user_name}}
         {{form.user_name.errors}}
     </div>
+    <div class="form-control {% if form.review.errors %}errors{% endif %}">
+        {% csrf_token %}
+        {{form.review.label_tag}}
+        {{form.review}}
+        {{form.review.errors}}
+    </div>
         <button type="submit">Send</button>
     </form>
 </body>
