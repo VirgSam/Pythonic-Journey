@@ -7,3 +7,6 @@ class ReviewFORM(forms.Form):
     "max_length":"Please enter a shorter name!",
 
     })# required true is always default, so no need to add it.
+
+    review =forms.CharField(label="Your Feedback", widget=forms.Textarea, max_length=200)
+    ratings =forms.IntegerField(label="Your Rating", min_value=1, max_value=5)
