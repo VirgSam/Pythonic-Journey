@@ -9,11 +9,12 @@
 </head>
 <body>
     <form action="/" method="POST">
+    <div class="form-control">
         {% csrf_token %}
         {{form.user_name.label_tag}}
         {{form.user_name}}
         {{form.user_name.errors}}
-        
+    </div>
         <button type="submit">Send</button>
     </form>
 </body>
