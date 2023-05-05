@@ -22,6 +22,6 @@ class ReviewFORM(forms.ModelForm):
         # exclude = ['Field name you want to exclude']
         labels = {
             "user_name":"Your Name",
-            "review": "Your Review",
-            "ratings":"Your Ratings", 
+            "review": "Your Feedback",
+            "ratings":"Your Rating", 
                   }
