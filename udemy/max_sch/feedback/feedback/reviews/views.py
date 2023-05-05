@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import ReviewFORM
+from django.views import View
 #from .models import Review
 
 # Create your views here.
+class ReviewView(View):
 
 def review(request):
+    """
+    Views as functions
+    """
     if request.method == "POST":
        form = ReviewFORM(request.POST)
        if form.is_valid():

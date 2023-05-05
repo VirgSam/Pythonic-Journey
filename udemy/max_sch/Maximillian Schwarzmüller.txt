@@ -183,3 +183,6 @@ how to use the django form class
 create form.py in app folder
 
 section 139 stopped here
+
+section 147 
+difference between model and modelform
