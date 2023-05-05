@@ -189,3 +189,5 @@ difference between model and modelform
 
 section 148 
 difference between class (has get() and post()) and function views: 
+when using class views update url using the classname.as_view() function eg
+ path("",views.ReviewView.as_view()),
