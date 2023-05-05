@@ -6,6 +6,14 @@ from django.views import View
 
 # Create your views here.
 class ReviewView(View):
+   """
+   Views as classes
+   """
+   def get(self,request):
+      pass
+   def post(self,request):
+      pass
+   
 
 def review(request):
     """

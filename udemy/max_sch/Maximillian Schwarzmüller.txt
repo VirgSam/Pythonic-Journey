@@ -186,3 +186,6 @@ section 139 stopped here
 
 section 147 
 difference between model and modelform
+
+section 148 
+difference between class (has get() and post()) and function views: 
