@@ -39,18 +39,19 @@ class ReviewView(View):
 #         form = ReviewFORM()
 #     return render(request,"reviews/review.html",{"form":form})
 
-# tried using the TemplateView
-# class ThankYou(TemplateView):
-#    template_name = "thank_you.html"
-   
-#    def thank_you(self, request):
+# Using the View class
+# class ThankYouView(View):
+#    """
+#    Thank you View in class representation
+#    """
+#    def get(self, request):
 #       return render(request,"reviews/thank_you.html")
 
-class ThankYouView(View):
-   """
-   Thank you View in class representation
-   """
-   def get(self, request):
-      return render(request,"reviews/thank_you.html")
+# Using the TemplateView
+class ThankYouView(TemplateView):
+   template_name = "reviews/thank_you.html"
+
+
+
 
    
