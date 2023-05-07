@@ -28,18 +28,11 @@ from django.views.generic.edit import FormView
 # Using the FormView approach
 class ReviewView(FormView):
    """
-   Views as classes
+   How to use the Form View
    """
-   def get(self,request):
-      form = ReviewFORM()
-      return render(request,"reviews/review.html",{"form":form})
-   
-   def post(self,request):
-      form = ReviewFORM(request.POST)
-      if form.is_valid():
-         form.save()
-         return HttpResponseRedirect("/thank-you")
-      return render(request,"reviews/review.html",{"form":form})
+   form_class = ReviewFORM
+   template_name = "reviews/review.html" #{the section makes the get method above redundant}
+   success_url = "/thank-you" #{the section makes the post method above redundant}
    
 # Using the View function
 # def review(request):
