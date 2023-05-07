@@ -57,15 +57,22 @@ class ThankYouView(TemplateView):
          context["message"] = "A message was input into the context dictionary"
          return context
 
+# using the Template view as a list capture mechanism
+# class ReviewListView(TemplateView):
+#     template_name = "reviews/review_list.html"
 
-class ReviewListView(TemplateView):
+#     def get_context_data(self, **kwargs):
+#          context = super().get_context_data(**kwargs)
+#          reviews = Review.objects.get(**kwargs)
+#          context["reviews"]= reviews
+#          return context
+
+# using the List view as a list capture mechanism
+class ReviewListView(ListView):
     template_name = "reviews/review_list.html"
+    model = Review # not instantiated
 
-    def get_context_data(self, **kwargs):
-         context = super().get_context_data(**kwargs)
-         reviews = Review.objects.get(**kwargs)
-         context["reviews"]= reviews
-         return context
+    
 
 
 class SingleReviewView(TemplateView):
