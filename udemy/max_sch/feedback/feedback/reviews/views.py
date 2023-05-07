@@ -70,7 +70,11 @@ class ThankYouView(TemplateView):
 # using the List view as a list capture mechanism
 class ReviewListView(ListView):
     template_name = "reviews/review_list.html"
-    model = Review # not instantiated
+    model = Review # not instantiated 
+    context_object_name = "review"
+
+    
+    
 
     
 
