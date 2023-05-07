@@ -7,9 +7,26 @@ from django.views import View
 from .models import Review
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import FormView
 
 # Create your views here.
-class ReviewView(View):
+# class ReviewView(View):
+#    """
+#    Views as classes to control in detail how your form is rendered
+#    """
+#    def get(self,request):
+#       form = ReviewFORM()
+#       return render(request,"reviews/review.html",{"form":form})
+   
+#    def post(self,request):
+#       form = ReviewFORM(request.POST)
+#       if form.is_valid():
+#          form.save()
+#          return HttpResponseRedirect("/thank-you")
+#       return render(request,"reviews/review.html",{"form":form})
+#
+# Using the FormView approach
+class ReviewView(FormView):
    """
    Views as classes
    """
@@ -24,7 +41,7 @@ class ReviewView(View):
          return HttpResponseRedirect("/thank-you")
       return render(request,"reviews/review.html",{"form":form})
    
-
+# Using the View function
 # def review(request):
 #     """
 #     Views as functions
@@ -78,12 +95,7 @@ class ReviewListView(ListView):
     model = Review # not instantiated 
     context_object_name = "review" # to rename object so the output will dynamically generate on server.
 
-    
-    
-
-    
-
-
+   
 # using the TemplateView as a detail capture mechanism
 # class SingleReviewView(TemplateView):
 #    template_name = "reviews/single_review.html"
@@ -101,6 +113,6 @@ class SingleReviewView(DetailView):
    Simpler than above approach
    """
    template_name = "reviews/single_review.html"
-   model = Review # note django needs the pk as the slug input in the urls.py
+   model = Review # note django uses the pk as the slug input in the urls.py
    
   
