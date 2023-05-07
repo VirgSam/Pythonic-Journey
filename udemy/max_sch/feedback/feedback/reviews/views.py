@@ -4,6 +4,7 @@ from .forms import ReviewFORM
 from django.views import View
 from .models import Review
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView
 
 # Create your views here.
 class ReviewView(View):
@@ -65,7 +66,8 @@ class ReviewListView(TemplateView):
          reviews = Review.objects.get(**kwargs)
          context["reviews"]= reviews
          return context
-   
+
+
 class SingleReviewView(TemplateView):
    template_name = "reviews/single_review.html"
 
