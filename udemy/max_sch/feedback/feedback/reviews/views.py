@@ -7,9 +7,10 @@ from django.views import View
 from .models import Review
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, CreateView 
 
 # Create your views here.
+# Using the class View approach
 # class ReviewView(View):
 #    """
 #    Views as classes to control in detail how your form is rendered
@@ -26,18 +27,29 @@ from django.views.generic.edit import FormView
 #       return render(request,"reviews/review.html",{"form":form})
 #
 # Using the FormView approach
-class ReviewView(FormView):
-   """
-   How to use the Form View
-   """
-   form_class = ReviewFORM
-   template_name = "reviews/review.html" #{the section makes the get method above redundant}
-   success_url = "/thank-you" #{the section makes the post method above redundant}
+# class ReviewView(FormView):
+#    """
+#    How to use the Form View
+#    """
+#    form_class = ReviewFORM
+#    template_name = "reviews/review.html" #{the section makes the get method above redundant}
+#    success_url = "/thank-you" #{the section makes the post method above redundant}
 
-   def form_valid(self, form):#{the section deals with the validation and storing of your data as above}
-       form.save()
-       return super().form_valid(form)
+#    def form_valid(self, form):#{the section deals with the validation and storing of your data as above}
+#        form.save()
+#        return super().form_valid(form)
+
+# Using the CreateView 
+class ReviewView(CreateView):
+   """
+   How to use the Create View in comparison to the Form
+   """
+   model= Review
+   form_class = ReviewFORM
+   template_name = "reviews/review.html"
+   success_url = "/thank-you" #{Create view will automatically validate and save your date, making form_valid redundant}
    
+
 # Using the View function
 # def review(request):
 #     """
