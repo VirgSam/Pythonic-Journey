@@ -1,10 +1,12 @@
+from typing import Any
+from django.db import models
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import ReviewFORM
 from django.views import View
 from .models import Review
 from django.views.generic.base import TemplateView
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 class ReviewView(View):
@@ -69,9 +71,12 @@ class ThankYouView(TemplateView):
 
 # using the List view as a list capture mechanism
 class ReviewListView(ListView):
+    """
+    Simpler approach than above
+    """
     template_name = "reviews/review_list.html"
     model = Review # not instantiated 
-    context_object_name = "review"
+    context_object_name = "review" # to rename object so the output will dynamically generate on server.
 
     
     
@@ -79,13 +84,23 @@ class ReviewListView(ListView):
     
 
 
-class SingleReviewView(TemplateView):
+# using the TemplateView as a detail capture mechanism
+# class SingleReviewView(TemplateView):
+#    template_name = "reviews/single_review.html"
+
+#    def get_context_data(self, **kwargs):
+#          context = super().get_context_data(**kwargs)
+#          review_id = kwargs["id"]
+#          select_review = Review.objects.get(pk=review_id)
+#          context["review"]= select_review
+#          return context
+
+# using the DetailView as a detail capture mechanism
+class SingleReviewView(DetailView):
+   """
+   Simpler than above approach
+   """
    template_name = "reviews/single_review.html"
-
-   def get_context_data(self, **kwargs):
-         context = super().get_context_data(**kwargs)
-         review_id = kwargs["id"]
-         select_review = Review.objects.get(pk=review_id)
-         context["review"]= select_review
-         return context
+   model = Review # note django needs the pk as the slug input in the urls.py
    
+  
