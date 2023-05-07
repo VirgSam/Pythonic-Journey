@@ -1,7 +1,7 @@
 from typing import Any
 from django.db import models
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from .forms import ReviewFORM
 from django.views import View
 from .models import Review
@@ -33,6 +33,10 @@ class ReviewView(FormView):
    form_class = ReviewFORM
    template_name = "reviews/review.html" #{the section makes the get method above redundant}
    success_url = "/thank-you" #{the section makes the post method above redundant}
+
+   def form_valid(self, form):#{the section deals with the validation and storing of your data as above}
+       form.save()
+       return super().form_valid(form)
    
 # Using the View function
 # def review(request):
