@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'reviews',
+    'profiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,8 @@ ROOT_URLCONF = 'feedback.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/"reviews/templates"],
+        'DIRS': [BASE_DIR/"reviews/templates",
+                 BASE_DIR/"profiles/templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +126,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "reviews/static/"
+    BASE_DIR / "reviews/static/",
+    BASE_DIR / "profiles/static/",
 ]
