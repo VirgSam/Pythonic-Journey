@@ -102,7 +102,7 @@ class ReviewListView(ListView):
     """
     template_name = "reviews/review_list.html"
     model = Review # not instantiated 
-    context_object_name = "review" # to rename object so the output will dynamically generate on server.
+    context_object_name = "reviews" # to rename object so the output will dynamically generate on server.
 
    
 # using the TemplateView as a detail capture mechanism
