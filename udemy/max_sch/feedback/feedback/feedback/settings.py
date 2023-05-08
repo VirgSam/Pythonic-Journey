@@ -129,3 +129,5 @@ STATICFILES_DIRS = [
     BASE_DIR / "reviews/static/",
     BASE_DIR / "profiles/static/",
 ]
+
+MEDIA_ROOT= BASE_DIR / "uploads"
