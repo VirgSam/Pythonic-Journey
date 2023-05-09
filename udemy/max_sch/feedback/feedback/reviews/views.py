@@ -129,4 +129,5 @@ class AddFavouriteView(View):
         review_id = request.POST["review_id"]
         fav_review = Review.objects.get(pk=review_id)
         request.session["favorite_review"] = fav_review # storing the fav_rev object in a dict with the key "favorite_review"
+        return HttpResponseRedirect("/reviews/" + review_id)
   
