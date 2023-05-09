@@ -123,5 +123,8 @@ class SingleReviewView(DetailView):
    """
    template_name = "reviews/single_review.html"
    model = Review # note django uses the pk as the slug input in the urls.py
-   
+
+class AddFavouriteView(View):
+    def post(self,request):
+        pass
   

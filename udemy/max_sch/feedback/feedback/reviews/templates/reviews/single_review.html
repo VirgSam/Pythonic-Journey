@@ -9,7 +9,8 @@
 
 <div><p>Review:{{review.review}}</p></div>
 <div>
-    <form action="">#
+    <form action="/reviews/favorite" method="POST">
+        <input type="hidden" name="review_id" value={{review_id}}>
         <button>
             Favourite
         </button>
