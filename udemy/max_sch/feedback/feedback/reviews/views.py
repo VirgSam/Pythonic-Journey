@@ -126,5 +126,6 @@ class SingleReviewView(DetailView):
 
 class AddFavouriteView(View):
     def post(self,request):
-        pass
+        review_id = request.POST["review_id"]
+        Review.objects.get(pk=review_id)
   
