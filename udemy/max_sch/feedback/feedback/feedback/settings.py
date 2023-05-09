@@ -132,3 +132,4 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT= BASE_DIR / "uploads"
 MEDIA_URL = "/user-media/"
+# SESSION_COOKIE_AGE = time in secs default is 2 weeks
