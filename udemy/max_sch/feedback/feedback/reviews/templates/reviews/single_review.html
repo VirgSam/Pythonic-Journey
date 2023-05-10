@@ -8,7 +8,11 @@
 <div><p>Rating:{{review.ratings}}</p></div>
 
 <div><p>Review:{{review.review}}</p></div>
+
 <div>
+    {%if is_favourite%}
+    <p>This is my Favourite</p>
+    {%else%}
     <form action="/reviews/favourite" method="POST">
         {% csrf_token %}
         <input type="hidden" name="review_id" value={{review.id}}>
@@ -16,5 +20,6 @@
             Favourite
         </button>
     </form>
+    {%endif%}
 </div> 
 {% endblock %}
