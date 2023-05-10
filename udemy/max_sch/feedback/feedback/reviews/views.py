@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 from django.db import models
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -123,6 +123,14 @@ class SingleReviewView(DetailView):
    """
    template_name = "reviews/single_review.html"
    model = Review # note django uses the pk as the slug input in the urls.py
+
+   def get_context_data(self, **kwargs: Any):
+       context = super().get_context_data(**kwargs)
+       loaded_review = self.object 
+       request = self.request
+       favorite_id = request.session["favourite_review"]
+       context["is_favourite"] = favorite_id == loaded_review.id
+       return context
 
 class AddFavouriteView(View):
     def post(self,request):
