@@ -5,6 +5,7 @@ from . models import Post
 
 # Create your views here.
 class StartingPageView(ListView):
+    template_name = "blog/index.html"
     pass
 def starting_page(request):
     latest_post= Post.objects.all().order_by("-date")[:3]
