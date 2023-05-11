@@ -191,3 +191,15 @@ section 148
 difference between class (has get() and post()) and function views: 
 when using class views update url using the classname.as_view() function eg
  path("",views.ReviewView.as_view()),
+
+section 153 Template views
+how to create view classes
+
+section 171
+Review code snapshot, my image files did not render
+
+section 177
+# SESSION_COOKIE_AGE = time in secs default is 2 weeks
+
+section 180
+dont store objects in sessions, strings,lists,ints,dicts are preferable
