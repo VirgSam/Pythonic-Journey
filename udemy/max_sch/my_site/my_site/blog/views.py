@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView 
 from . models import Post
 
 
@@ -28,9 +28,13 @@ class AllPostsView(ListView):
     ordering = ["-date"]
     context_object_name = "all_posts"
 
+# retired function view 
 # def posts(request):
 #     posts_list= Post.objects.all().order_by("-date")
 #     return render (request,"blog/all-posts.html",{"all_posts":posts_list})
+
+class SinglePostView(DetailView):
+    pass
 
 def posts_detail(request, slug):
     search_post =get_object_or_404(Post, slug=slug)
