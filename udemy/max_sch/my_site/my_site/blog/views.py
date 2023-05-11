@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
 from . models import Post
 
+
 # Create your views here.
+class StartingPageView(ListView):
+    pass
 def starting_page(request):
     latest_post= Post.objects.all().order_by("-date")[:3]
     return render (request,"blog/index.html",{"posts":latest_post})
