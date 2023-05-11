@@ -15,10 +15,11 @@ class StartingPageView(ListView):
         queryset= super().get_queryset()
         data = queryset[:3]
         return data
-    
-def starting_page(request):
-    latest_post= Post.objects.all().order_by("-date")[:3]
-    return render (request,"blog/index.html",{"posts":latest_post})
+
+# retired function view    
+# def starting_page(request):
+#     latest_post= Post.objects.all().order_by("-date")[:3]
+#     return render (request,"blog/index.html",{"posts":latest_post})
                                
 def posts(request):
     posts_list= Post.objects.all().order_by("-date")
