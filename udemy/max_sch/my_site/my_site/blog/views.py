@@ -21,10 +21,15 @@ class StartingPageView(ListView):
 # def starting_page(request):
 #     latest_post= Post.objects.all().order_by("-date")[:3]
 #     return render (request,"blog/index.html",{"posts":latest_post})
-                               
-def posts(request):
-    posts_list= Post.objects.all().order_by("-date")
-    return render (request,"blog/all-posts.html",{"all_posts":posts_list})
+
+class AllPostsView(ListView):
+    template_name = "blog/all-posts.html"
+    model = Post
+    context_object_name = "all_posts"
+
+# def posts(request):
+#     posts_list= Post.objects.all().order_by("-date")
+#     return render (request,"blog/all-posts.html",{"all_posts":posts_list})
 
 def posts_detail(request, slug):
     search_post =get_object_or_404(Post, slug=slug)
