@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView 
@@ -36,6 +36,11 @@ class AllPostsView(ListView):
 class SinglePostView(DetailView):
     template_name = "blog/post-detail.html"
     model = Post
+
+    def get_context_data(self, **kwargs: Any):
+        context= super().get_context_data(**kwargs)
+        context["post_tags"] = self.object.tags.all()
+        return context
     
 # retired function view 
 # def posts_detail(request, slug):
