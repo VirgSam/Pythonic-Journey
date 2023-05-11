@@ -34,12 +34,14 @@ class AllPostsView(ListView):
 #     return render (request,"blog/all-posts.html",{"all_posts":posts_list})
 
 class SinglePostView(DetailView):
-    pass
-
-def posts_detail(request, slug):
-    search_post =get_object_or_404(Post, slug=slug)
-    return render(request,"blog/post-detail.html",{
-                                                    "post":search_post,
-                                                    "post_tags":search_post.tags.all(),
+    template_name = "blog/post-detail.html"
+    model = Post
+    
+# retired function view 
+# def posts_detail(request, slug):
+#     search_post =get_object_or_404(Post, slug=slug)
+#     return render(request,"blog/post-detail.html",{
+#                                                     "post":search_post,
+#                                                     "post_tags":search_post.tags.all(),
                                                     
-                                                    })
+#                                                     })
