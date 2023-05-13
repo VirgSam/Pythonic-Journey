@@ -37,7 +37,8 @@
     </p>
     
     <div class="form-control">
-        <form id="comment_form">
+        <form action="{%url "posts-detail-page" post.slug %}" method="POST" >
+            {% csrf_token %}
             {% for form_field in comment_form %}
 
             {{form_field.label_tag}}
