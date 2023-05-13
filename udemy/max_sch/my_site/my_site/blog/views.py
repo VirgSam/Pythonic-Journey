@@ -1,7 +1,7 @@
 from typing import Any, Dict
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, # DetailView 
+from django.views.generic import ListView # DetailView 
 from django.views import View
 from django.urls import reverse
 from django.http import HttpResponseRedirect
