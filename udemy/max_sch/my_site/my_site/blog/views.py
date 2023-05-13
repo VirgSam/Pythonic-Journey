@@ -51,9 +51,18 @@ class SinglePostView(View):
 
     def post(self, request,slug):
         comment_form = CommentForm(request.POST)
+        post=Post.objects.get(slug=slug)
         if comment_form.is_valid():
-            comment_form.save()
-        return HttpResponseRedirect(reverse("posts-detail-page", args=[slug]))
+           comment = comment_form.save(commit=False)
+           comment.post = 
+           return HttpResponseRedirect(reverse("posts-detail-page", args=[slug]))
+        
+        context= {
+            "post": post,
+            "post_tags":post.tags.all(),
+            "comment_form": comment_form
+        }
+        return render(request,"blog/post-detail.html", context)
 
 
     
