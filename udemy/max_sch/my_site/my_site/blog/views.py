@@ -41,7 +41,10 @@ class SinglePostView(View):
 
     def get(self, request, slug):
         post=Post.objects.get(slug=slug)
-        
+        context= {
+            ""
+        }
+        return render(request,"blog/post-detail.html")
         pass
 
     def post(self, request):
