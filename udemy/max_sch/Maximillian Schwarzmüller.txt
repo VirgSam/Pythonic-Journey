@@ -203,3 +203,5 @@ section 177
 
 section 180
 dont store objects in sessions, strings,lists,ints,dicts are preferable
+
+section 190
