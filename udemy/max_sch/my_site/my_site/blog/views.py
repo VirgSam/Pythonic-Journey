@@ -36,9 +36,7 @@ class AllPostsView(ListView):
 #     return render (request,"blog/all-posts.html",{"all_posts":posts_list})
 
 class SinglePostView(View):
-    template_name = "blog/post-detail.html"
-    model = Post
-
+    
     def get(self, request, slug):
         post=Post.objects.get(slug=slug)
         context= {
@@ -47,10 +45,13 @@ class SinglePostView(View):
             "comment_form": CommentForm()
         }
         return render(request,"blog/post-detail.html", context)
-        pass
+        
 
     def post(self, request):
-        pass
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment_form.save()
+
 
     
 
