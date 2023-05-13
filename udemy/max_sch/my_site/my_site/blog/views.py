@@ -3,6 +3,8 @@ from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, # DetailView 
 from django.views import View
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from . models import Post
 from . forms import CommentForm
 
@@ -47,10 +49,11 @@ class SinglePostView(View):
         return render(request,"blog/post-detail.html", context)
         
 
-    def post(self, request):
+    def post(self, request,slug):
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             comment_form.save()
+        return HttpResponseRedirect(reverse("posts-detail-page", args=[slug]))
 
 
     
