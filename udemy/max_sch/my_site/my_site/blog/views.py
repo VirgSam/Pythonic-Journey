@@ -1,7 +1,8 @@
 from typing import Any, Dict
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView 
+from django.views.generic import ListView, # DetailView 
+from django.views import View
 from . models import Post
 from . forms import CommentForm
 
@@ -34,15 +35,34 @@ class AllPostsView(ListView):
 #     posts_list= Post.objects.all().order_by("-date")
 #     return render (request,"blog/all-posts.html",{"all_posts":posts_list})
 
-class SinglePostView(DetailView):
+class SinglePostView(View):
     template_name = "blog/post-detail.html"
     model = Post
+
+    def get(self, request, slug):
+        post=Post.objects.get(slug=slug)
+        
+        pass
+
+    def post(self, request):
+        pass
 
     def get_context_data(self, **kwargs: Any):
         context= super().get_context_data(**kwargs)
         context["post_tags"] = self.object.tags.all()
         context["comment_form"] = CommentForm
         return context
+
+# retired DetailView and used View to get more control on handling post request
+# class SinglePostView(DetailView):
+#     template_name = "blog/post-detail.html"
+#     model = Post
+
+#     def get_context_data(self, **kwargs: Any):
+#         context= super().get_context_data(**kwargs)
+#         context["post_tags"] = self.object.tags.all()
+#         context["comment_form"] = CommentForm
+#         return context
     
 # retired function view 
 # def posts_detail(request, slug):
