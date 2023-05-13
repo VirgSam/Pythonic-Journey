@@ -64,7 +64,7 @@ class SinglePostView(View):
             "post": post,
             "post_tags":post.tags.all(),
             "comment_form": comment_form,
-            
+            "comments": post.comments.all()
         }
         return render(request,"blog/post-detail.html", context)
 
