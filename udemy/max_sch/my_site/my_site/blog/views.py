@@ -46,7 +46,7 @@ class SinglePostView(View):
             "post_tags":post.tags.all(),
             "comment_form": CommentForm()
         }
-        return render(request,"blog/post-detail.html")
+        return render(request,"blog/post-detail.html", context)
         pass
 
     def post(self, request):
