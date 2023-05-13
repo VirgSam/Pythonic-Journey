@@ -52,11 +52,7 @@ class SinglePostView(View):
     def post(self, request):
         pass
 
-    def get_context_data(self, **kwargs: Any):
-        context= super().get_context_data(**kwargs)
-        context["post_tags"] = self.object.tags.all()
-        context["comment_form"] = CommentForm
-        return context
+    
 
 # retired DetailView and used View to get more control on handling post request
 # class SinglePostView(DetailView):
