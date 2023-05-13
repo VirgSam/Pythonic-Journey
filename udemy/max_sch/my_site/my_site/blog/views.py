@@ -54,7 +54,8 @@ class SinglePostView(View):
         post=Post.objects.get(slug=slug)
         if comment_form.is_valid():
            comment = comment_form.save(commit=False)
-           comment.post = 
+           comment.post = post
+           comment.save()
            return HttpResponseRedirect(reverse("posts-detail-page", args=[slug]))
         
         context= {
