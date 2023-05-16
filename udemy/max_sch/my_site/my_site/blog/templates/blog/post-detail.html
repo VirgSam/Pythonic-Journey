@@ -28,7 +28,7 @@
         <span class="tag">{{tag.caption}}</span>
         {%endfor%}
     </div>
-    <form action="" method="POST">
+    <form action="{% url "read-later" %}" method="POST">
         {% csrf_token %}
         <input type="hidden" value="{{post.id}}" name="post_id">
         <div id="read-later">
