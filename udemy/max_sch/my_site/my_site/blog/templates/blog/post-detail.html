@@ -28,11 +28,15 @@
         <span class="tag">{{tag.caption}}</span>
         {%endfor%}
     </div>
-    <div id="read-later">
-        <button>
-            Read Later
-        </button>
-    </div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="hidden" value="{{post.id}}" name="post_id">
+        <div id="read-later">
+            <button>
+                Read Later
+            </button>
+        </div>
+    </form>
     <article>
         <img src="{{post.image.url}}" alt="{{ post.title }}">
         <address><a href="mailto:{{post.author.email_address}}">By Christopher</a> </address>
