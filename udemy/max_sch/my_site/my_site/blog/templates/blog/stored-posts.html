@@ -6,6 +6,9 @@
 
 {% block content %} 
 <section>
+    {% if not has_post%}
+    <p> You didn't save any post for later</p>
+    {% endif %}
     <ul>
         {%for post in posts%}
         <li>
