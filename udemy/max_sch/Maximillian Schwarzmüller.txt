@@ -204,4 +204,6 @@ section 177
 section 180
 dont store objects in sessions, strings,lists,ints,dicts are preferable
 
-section 190
+section 212
+how to create a requirements list
+python3 -m pip freeze > requirements.txt
