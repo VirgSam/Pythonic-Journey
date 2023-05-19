@@ -29,7 +29,7 @@ SECRET_KEY = getenv("SECRET_KEY")
 DEBUG = getenv("IS_DEVELOPMENT", True)
 
 ALLOWED_HOSTS = [
-    #getenv("APP_HOST")
+    getenv("APP_HOST"),"localhost"
 ]
 
 
@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '',
+        'USER': 'postgres',
+        'PASSWORD': 'db.sqlite3',
+        'HOST': 'db.sqlite3',
+        'PORT': 'db.sqlite3',
     }
 }
 
