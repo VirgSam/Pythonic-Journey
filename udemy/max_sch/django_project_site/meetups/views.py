@@ -7,4 +7,10 @@ def index(request):
     """
     homepage of our website
     """
-    return render(request, 'meetups/index.html') # return index.html
+    meetups = [
+        {'title':'A First meetup'},
+        {'title':'A Second meetup'},
+    ]
+    return render(request, 'meetups/index.html',{
+        'meetups': meetups,
+    }) # return index.html
