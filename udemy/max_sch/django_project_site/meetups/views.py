@@ -13,4 +13,5 @@ def index(request):
     ]
     return render(request, 'meetups/index.html',{
         'meetups': meetups,
+        'show_meetups': False,
     }) # return index.html
