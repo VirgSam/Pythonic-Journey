@@ -12,7 +12,10 @@
         <h1>All Meetups</h1>
         <p>Hello World</p>
  
-        
-        <h2>{{meetups.0.title}}</h2>
+        {%if show_meetups%}
+            <h2>{{meetups.0.title}}</h2>
+        {%else %}
+            <h2>No meetups found!</h2>
+        {%endif%%}
     </body>
 </html>
