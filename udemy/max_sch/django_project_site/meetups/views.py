@@ -16,3 +16,8 @@ def index(request):
         'meetups': meetups,
         'show_meetups': True,
     }) # return index.html
+
+def meetup_detail(request):
+    """
+    homepage of our website
+    """
