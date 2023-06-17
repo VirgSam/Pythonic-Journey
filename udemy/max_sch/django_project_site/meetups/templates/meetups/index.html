@@ -19,10 +19,18 @@
         <main>
             <section>
                 <h2>
-                    Upcomning Meetups
+                    Upcoming Meetups
                 </h2>
                 <ol>
-                        
+                    <li>
+                        {% for meetup in meetups%}
+                            {{meetup.title}}
+                            {{meetup.location}}
+                            {{meetup.slug}}
+                        {% endfor %}
+                    </li>
+                      
+
                 </ol>
             </section>
         </main>
