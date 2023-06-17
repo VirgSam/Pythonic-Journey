@@ -19,5 +19,6 @@ def index(request):
 
 def meetup_detail(request):
     """
-    homepage of our website
+    Meetup details
     """
+    return render(request,'meetups/meetup-details.html')
