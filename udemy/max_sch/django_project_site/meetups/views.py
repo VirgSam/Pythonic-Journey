@@ -17,7 +17,7 @@ def index(request):
         'show_meetups': True,
     }) # return index.html
 
-def meetup_detail(request):
+def meetup_detail(request, meetup_slug):
     """
     Meetup details
     """
