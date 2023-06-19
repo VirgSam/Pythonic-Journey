@@ -1,22 +1,26 @@
 {% load static%}
 {% extends 'meetups/base/base.html' %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>All Meetups</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'meetups/styles/base.css'%}">
-        <link rel="stylesheet" href="{% static 'meetups/styles/all_meetups.css'%}">
+
+{%block title %}All Meetups{%endblock%}
+
+{%block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/all_meetups.css'%}">
+{%endblock%}
+{%block main_heading %}
+We have great meetup events coming up!
+{%endblock%}
+{%block header_content %}
+<p>Find the meetup that best suit your needs</p>
+{%endblock%}
+        
     </head>
     <body>
         <header id="main-header">
             <nav>
                 <a href="/meetups" id="main-logo">Django Meetups</a>
             </nav>
-            <h1>We have great meetup events coming up!</h1>
-            <p>Find the meetup that best suit your needs</p>
+            <h1></h1>
+            
         </header>
         <main>
             <section>
@@ -52,4 +56,3 @@
         </main>
         
     </body>
-</html>
