@@ -3,22 +3,42 @@
 
 {% load static%}
 
-{%block title %}{{title}}{%endblock%}
+{%block title %}{{meetups.title}}{%endblock%}
 
 {%block site_css %}
 <link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css'%}">
 {%endblock%}
 
 {%block main_heading %}
-<h2>Meetup Location</h2>
+<h2>{{meetups.title}}</h2>
 {%endblock%}
 
-{%block header_content %}
-<address>
-    This meetup takes place at <span>LOCATION</span>
-    (ADDRESS).
-</address>
-
+{%block body %}
+<main>
+    <article>
+        <a href=""></a>
+    </article>
+    <section id="location">
+        <h2>Meetup Location</h2>
+        <address>
+            This meetup takes place at <span>LOCATION</span>
+            (ADDRESS).
+        </address>
+    
+    </section>
+    <section id="details">
+        <h2>What Is This Meetup About?</h2>
+        <p>{{description}}</p>
+        <footer>
+            Need more details? <a href="">Please contact the event co-ordinator</a>
+        </footer>
+    </section>
+    <section id="registration">
+        <h2>Join Us!</h2>
+        FORM
+    
+    </section>
+</main>
 {%endblock%}
 <html lang="en">
 <head>
@@ -29,30 +49,6 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <main>
-        <article>
-            <a href=""></a>
-        </article>
-        <section id="location">
-            <h2>Meetup Location</h2>
-            <address>
-                This meetup takes place at <span>LOCATION</span>
-                (ADDRESS).
-            </address>
-        
-        </section>
-        <section id="details">
-            <h2>What Is This Meetup About?</h2>
-            <p>{{description}}</p>
-            <footer>
-                Need more details? <a href="">Please contact the event co-ordinator</a>
-            </footer>
-        </section>
-        <section id="registration">
-            <h2>Join Us!</h2>
-            FORM
-        
-        </section>
-    </main>
+   
 </body>
 </html>
