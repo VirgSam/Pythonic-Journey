@@ -1,10 +1,31 @@
 {% load static %}
+{% extends 'meetups/base/base.html' %}
+
+{% load static%}
+
+{%block title %}{{title}}{%endblock%}
+
+{%block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css'%}">
+{%endblock%}
+
+{%block main_heading %}
+<h2>Meetup Location</h2>
+{%endblock%}
+
+{%block header_content %}
+<address>
+    This meetup takes place at <span>LOCATION</span>
+    (ADDRESS).
+</address>
+
+{%endblock%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'meetups/styles/base.css'%}">
-    <link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css'%}">
+    
     <title>{{title}}</title>
 </head>
 <body>
