@@ -26,7 +26,7 @@ def meetup_detail(request, meetup_slug):
             'description':'This is the first meetup',            
         }
     
-    return render(request,'meetups/meetup-details.html',{
+    return render(request,'meetups/meetup-items.html',{
         'title':selected_meetups['title'],
         'description':selected_meetups['description'],
     })
