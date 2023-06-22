@@ -18,12 +18,9 @@ def meetup_detail(request, meetup_slug):
     """
     Meetup details
     """
-    selected_meetups = {
-            'title':'A First Meetup',            
-            'description':'This is the first meetup',            
-        }
+    selected_meetups = Meetup.objects.get(slug=meetup_slug)
     
     return render(request,'meetups/meetup-items.html',{
-        'title':selected_meetups['title'],
-        'description':selected_meetups['description'],
+        'title':selected_meetups.title,
+        'description':selected_meetups.description,
     })
