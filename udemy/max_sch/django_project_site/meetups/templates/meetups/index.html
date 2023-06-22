@@ -13,7 +13,7 @@ We have great meetup events coming up!
 {%endblock%}
 
 {%block header_content %}
-<p>Find the meetup that best suit your needs</p>
+<p>Find the meetup that best suit your needs!</p>
 {%endblock%}
 
 {%block body %}
@@ -25,7 +25,6 @@ We have great meetup events coming up!
         {% for meetup in meetups %}
             {% include 'meetups/includes/meetup-item.html' with title=meetup.title location=meetup.location %}
         {% endfor %}  
-        
     </ol>
 </section>
 
