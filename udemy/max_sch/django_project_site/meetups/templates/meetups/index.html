@@ -23,7 +23,7 @@ We have great meetup events coming up!
     </h2>
     <ol>
         {% for meetup in meetups %}
-            {% include 'meetups/includes/meetup-item.html' with title=meetup.title location=meetup.location %}
+            {% include 'meetups/includes/meetup-item.html' with title=meetup.title location="new york" %}
         {% endfor %}  
     </ol>
 </section>
