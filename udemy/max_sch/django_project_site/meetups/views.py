@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Meetup
 
 
 # Create your views here.
@@ -7,14 +8,10 @@ def index(request):
     """
     homepage of our website
     """
-    meetups = [
-        {'title':'A First meetup', 'location':'New York','slug':'a-first-meetup'},
-        {'title':'A Second meetup', 'location':'Berlin','slug':'a-second-meetup'},
-        
-    ]
+    meetups = Meetup.objects.all()
     return render(request, 'meetups/index.html',{
         'meetups': meetups,
-        'show_meetups': True,
+        
     }) # return index.html
 
 def meetup_detail(request, meetup_slug):
