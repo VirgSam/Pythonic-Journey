@@ -7,3 +7,7 @@ class Meetup(models.Model):
     slug = models.SlugField(unique=True)
     description= models.TextField()
     image= models.ImageField(upload_to="images", height_field=None, width_field=None, max_length=None)
+
+    def __str__(self):
+        return f"{self.title}"
+    
