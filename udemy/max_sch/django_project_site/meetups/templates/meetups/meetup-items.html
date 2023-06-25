@@ -2,14 +2,14 @@
 
 {% load static%}
 
-{%block title %}{{meetups.title}}{%endblock%}
+{%block title %}{{meetup.title}}{%endblock%}
 
 {%block site_css %}
 <link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css'%}">meetup_found
 {%endblock%}
 
 {%block main_heading %}
-<h2>{{meetups.title}}</h2>
+<h2>{{meetup.title}}</h2>
 {%endblock%}
 
 {%block body %}
