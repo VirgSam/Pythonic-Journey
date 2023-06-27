@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Meetup
+from .forms import RegistrationForm
 
 
 # Create your views here.
@@ -20,6 +21,7 @@ def meetup_detail(request, meetup_slug):
     """
     try:
         selected_meetups = Meetup.objects.get(slug=meetup_slug)
+        registration_form = RegistrationForm()
         return render(request,'meetups/meetup-items.html',{
         'meetup_found':True,
         'meetup':selected_meetups
