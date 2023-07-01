@@ -24,7 +24,8 @@ def meetup_detail(request, meetup_slug):
         registration_form = RegistrationForm()
         return render(request,'meetups/meetup-items.html',{
         'meetup_found':True,
-        'meetup':selected_meetups
+        'meetup':selected_meetups,
+        'form': registration_form,
     })
     except Exception as exc:
         return render(request,'meetups/meetup-items.html',{
