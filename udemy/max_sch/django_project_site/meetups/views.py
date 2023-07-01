@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Meetup
 from .forms import RegistrationForm
 
@@ -33,6 +33,7 @@ def meetup_detail(request, meetup_slug):
             if registration_form.is_valid():
                 participant=registration_form.save()
                 selected_meetups.participants.add(participant)
+                return redirect('confirm-registration')
 
 
     except Exception as exc:
