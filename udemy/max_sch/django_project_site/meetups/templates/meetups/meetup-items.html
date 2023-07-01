@@ -37,12 +37,11 @@
             <form action="{% url 'meetup-detail' meetup.slug %}" method="POST">
                 {% csrf_token %}
             <ul>
-                <div id="registration-actions">
-                    {{form.as_ul}}
-                </div>
-                    
-                
+                {{form.as_ul}}    
             </ul>
+            <div id="registration-actions">
+                  Register  
+            </div>
             </form>
         
         </section>
