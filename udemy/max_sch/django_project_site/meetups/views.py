@@ -38,8 +38,9 @@ def meetup_detail(request, meetup_slug):
             'meetup_found': False
         })
         
-def confirm_registration(request):
-    return render(request,'meetups/registration-success.html' )    
+def confirm_registration(request, meetup_slug):
+    meetup = Meetup.objects.get(slug=meetup_slug)
+    return render(request,'meetups/registration-success.html',{"organiser_email":meetup.organiser_email} )    
     
 
 
