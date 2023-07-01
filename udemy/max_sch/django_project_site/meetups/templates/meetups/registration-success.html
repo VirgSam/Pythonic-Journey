@@ -1,30 +1,26 @@
-
+{% extends 'meetups/base/base.html'%}
 {% load static%}
 
-{%block title %}All Meetups{%endblock%}
+{%block title %}You Registered Successfully!{%endblock%}
 
 {%block site_css %}
 <link rel="stylesheet" href="{% static 'meetups/styles/all_meetups.css'%}">
 {%endblock%}
 
 {%block main_heading %}
-We have great meetup events coming up!
-{%endblock%}
-
-{%block header_content %}
-<p>Find the meetup that best suit your needs!</p>
+Thanks for signing up
 {%endblock%}
 
 {%block body %}
-<section>
+<section id="confirmation">
     <h2>
-        Upcoming Meetups
+        You Registered Successfully!
     </h2>
-    <ol>
-        {% for meetup in meetups %}
-            {% include 'meetups/includes/meetup-item.html' with title=meetup.title location=meetup.location slug=meetup.slug image=meetup.image.url %}
-        {% endfor %}  
-    </ol>
+    <p>Thanks for signing up - see you at the meetup</p>
+    <p>If you have questions or cannot make the meetup, please <a href="">contact the organiser</a> at least 3 days ahead of the meetup.</p>
+</section>
+<section id="continue">
+    <p>ofcourse you can sign up for more than one meetup</p>
 </section>
 
 {%endblock%}
