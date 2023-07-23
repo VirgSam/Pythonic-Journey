@@ -14,4 +14,5 @@ RUN python -m vvenv /py && \
          /py/bin/pip install --upgrade pip && \
          /py/bin/pip install -r /requirementst.txt && \
          adduser --disabled-password --no-create-home app
-	
+
+ENV PATH="/py/bin:$PATH"
