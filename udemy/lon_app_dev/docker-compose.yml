@@ -12,7 +12,7 @@ services:
       - SECRET-KEY=devscrectkey
       - DEBUG=1
   db:
-    image:  postgres:3.12.0b4-alpine3.17
+    image:  postgres:13-alpine
     environment: 
       - POSTRES_DB=devdb
       - POSTRES_USER=devuser
