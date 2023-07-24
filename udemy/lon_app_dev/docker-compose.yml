@@ -9,8 +9,12 @@ services:
     volumes:
       - ./app:/app
     environment:
-      - SECRET-KEY=devscrectkey
+      - SECRET_KEY=devscrectkey
       - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=devdb
+      - DB_USER=devuser
+      - DB_PASS=changeme
   db:
     image:  postgres:13-alpine
     environment: 
