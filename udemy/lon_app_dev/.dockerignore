@@ -17,3 +17,4 @@ vvenv/
 
 # Local PostgreSQL data
 data/
+/data
