@@ -24,6 +24,6 @@ services:
   db:
     image:  postgres:13-alpine
     environment: 
-      - POSTRES_DB=devdb
-      - POSTRES_USER=devuser
-      - POSTRES_PASSWORD=changeme
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=changeme
