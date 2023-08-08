@@ -11,8 +11,8 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - static-data:/static_files
-      #- ./data/web:vol/web
+       - ./app:/app
+       - ./data/web:/vol/web
     environment:
       - SECRET_KEY=devscrectkey
       - DEBUG=1
