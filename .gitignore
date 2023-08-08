@@ -1,1 +1,3 @@
 vvenv/
+*.pyc
+*__pycache__*
