@@ -1,0 +1,15 @@
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
+git status && git add . && git commit -m "Update app.data.web.media with sample file" && git push
+
+
+- web-django:/usr/src/app
+- web-static:/usr/src/app/static
+admin1234 password
+
+User: admin1234
+pwd: admin1234
+
+proxy:
+https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html#what-is-the-uwsgi-params-file
+
+
