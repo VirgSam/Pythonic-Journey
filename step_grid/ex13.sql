@@ -21,3 +21,10 @@ name, area
 FROM 
 cities 
 WHERE area BETWEEN 2000 AND 4000;
+
+-- Using where statement with IN operator
+SELECT 
+name, area 
+FROM 
+cities 
+WHERE name IN ('Delhi','Shanghai');
