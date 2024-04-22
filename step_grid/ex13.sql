@@ -27,4 +27,14 @@ SELECT
 name, area 
 FROM 
 cities 
-WHERE name IN ('Delhi','Shanghai');
+WHERE 
+name 
+IN ('Delhi','Shanghai');
+
+SELECT 
+name, area 
+FROM 
+cities 
+WHERE 
+area 
+IN (3043,8223);
