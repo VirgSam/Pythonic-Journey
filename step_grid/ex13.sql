@@ -46,3 +46,12 @@ cities
 WHERE 
 area 
 NOT IN (3043,8223);
+
+-- Using complex where statement with IN operator
+SELECT 
+name, area 
+FROM 
+cities 
+WHERE 
+area 
+NOT IN (3043,8223) AND name = 'Delhi';
