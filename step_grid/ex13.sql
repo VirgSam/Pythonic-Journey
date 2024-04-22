@@ -38,3 +38,11 @@ cities
 WHERE 
 area 
 IN (3043,8223);
+
+SELECT 
+name, area 
+FROM 
+cities 
+WHERE 
+area 
+NOT IN (3043,8223);
