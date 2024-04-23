@@ -16,3 +16,14 @@ WHERE
 manufacturer ='Apple'
 OR
 manufacturer ='Samsung';
+
+/*Trying calculations with Where clauses*/
+
+SELECT 
+	name, 
+	price * units_sold AS 
+		total_revenue 
+FROM 
+	phones 
+WHERE 
+	price * units_sold > 1000000;
