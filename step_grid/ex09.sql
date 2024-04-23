@@ -19,3 +19,17 @@ VALUES
 
 SELECT name,manufacturer, price * units_sold AS revenue
 FROM phones;
+
+INSERT INTO phones(name,manufacturer,price,units_sold)
+VALUES
+('Droid','Motorola',150,8395),
+('Wave S8500','Samsung',175,9259);
+
+-- Write query here to update the 'units_sold' of the phone with name 'N8' to 8543
+UPDATE phones
+SET units_sold  = 8543
+WHERE name='N8';
+
+
+-- Write query here to select all rows and columns of the 'phones' table
+select * from phones;
