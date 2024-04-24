@@ -32,3 +32,8 @@ VALUES
 ('Alex',1),
 ('Lucia',1),
 ('Ari',2);
+
+-- Write a query that will fetch all crew_members with Boat id 1
+SELECT * FROM crew_members
+WHERE 
+boat_id = 1;
