@@ -45,3 +45,6 @@ user_id = 4;
 -- Using complex queries to join 2 different tables
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
+
+-- Testing out deletions constraints 
+DROP TABLE photos;
