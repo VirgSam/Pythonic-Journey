@@ -1,4 +1,4 @@
-/*Create Photos and users table*/
+/*Create Users table*/
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     username VARCHAR(50)
@@ -11,3 +11,10 @@ VALUES
 ('pferrer'),
 ('si93onis'),
 ('99stroman');
+
+/*Create Photos table*/
+CREATE TABLE photos(
+    id SERIAL PRIMARY KEY,
+    url VARCHAR(200),
+    user_id INTEGER REFERENCES users(id)
+);
