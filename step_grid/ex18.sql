@@ -33,3 +33,11 @@ VALUES
 ('http://754.jpg',2),
 ('http://35.jpg',3),
 ('http://256.jpg',4);
+
+-- Using select and where statement to identify user_id 4 photos
+SELECT 
+* 
+FROM
+photos
+WHERE
+user_id = 4;
