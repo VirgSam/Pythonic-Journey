@@ -86,3 +86,7 @@ VALUES
 ('http:/754.jpg', 2),
 ('http:/35.jpg', 3),
 ('http:/256.jpg', 4);
+
+-- Testing out deletions constraints 2
+DELETE FROM users where id = 4;
+SELECT * FROM photos; 
