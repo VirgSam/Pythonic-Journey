@@ -17,3 +17,11 @@ INSERT INTO boats(name)
 VALUES
 ('Rogue Wave'),
 ('Harbor Master');
+
+
+--create table called 'crew_members'
+CREATE TABLE crew_members(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50)
+    boat_id INTEGER REFERENCES boats(id)
+);
