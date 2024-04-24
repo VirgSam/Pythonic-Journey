@@ -69,3 +69,6 @@ VALUES
 -- Testing out the constraint
 DELETE FROM users WHERE id =1;
 SELECT * FROM photos; 
+
+-- Testing out deletions constraints 2
+DROP TABLE photos;
