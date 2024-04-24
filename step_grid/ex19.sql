@@ -19,9 +19,16 @@ VALUES
 ('Harbor Master');
 
 
---create table called 'crew_members'
+-- create table called 'crew_members'
 CREATE TABLE crew_members(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
     boat_id INTEGER REFERENCES boats(id)
 );
+
+-- insert 3 crew members
+INSERT INTO crew_members (first_name,boat_id)
+VALUES
+('Alex',1),
+('Lucia',1),
+('Ari',2);
