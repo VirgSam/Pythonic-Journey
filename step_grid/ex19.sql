@@ -12,3 +12,8 @@ CREATE TABLE boats(
 
 
 
+-- insert 2 boats
+INSERT INTO boats(name)
+VALUES
+('Rogue Wave'),
+('Harbor Master');
