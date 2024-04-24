@@ -65,3 +65,7 @@ VALUES
 ('http:/754.jpg', 2),
 ('http:/35.jpg', 3),
 ('http:/256.jpg', 4);
+
+-- Testing out the constraint
+DELETE FROM users WHERE id =1;
+SELECT * FROM photos; 
