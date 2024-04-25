@@ -16,3 +16,11 @@ CREATE TABLE books(
     title VARCHAR(100),
     author_id INTEGER REFERENCES authors(id) ON DELETE CASCADE
 );
+
+-- Insert into authors table
+INSERT INTO authors(name)
+VALUES
+('JK Rowling '),
+('Stephen King '),
+('Agatha Christie'),
+('Dr Seuss ');
