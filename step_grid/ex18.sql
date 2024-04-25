@@ -116,3 +116,12 @@ CREATE TABLE comments (
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   photo_id INTEGER REFERENCES photos(id) ON DELETE CASCADE
 );
+
+-- Insert into users table
+INSERT INTO users (username) 
+VALUES 
+  ('Reyna.Marvin'),
+        ('Micah.Cremin'),
+        ('Alfredo66'),
+        ('Gerard_Mitchell42'),
+        ('Frederique_Donnelly');
