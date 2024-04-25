@@ -254,12 +254,17 @@ VALUES
         ('Molestiae officia architecto eius nesciunt.', 5, 4),
         ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', 3, 3);
 
--- Using joing in queries
+-- Using join in queries
 SELECT contents,username
 FROM comments
 JOIN users ON users.id = comments.user_id;
 
--- Using joing in queries
+-- Using join in queries
 SELECT contents,username, photo_id
 FROM comments
 JOIN users ON users.id = comments.user_id;
+
+-- Using Join to select different columns
+SELECT contents, url
+FROM comments
+JOIN photos ON photo_id = comments.photo_id;
