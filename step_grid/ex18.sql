@@ -268,3 +268,8 @@ JOIN users ON users.id = comments.user_id;
 SELECT contents, url
 FROM comments
 JOIN photos ON photo_id = comments.photo_id;
+
+-- Query using Join statement
+SELECT url, username
+FROM  photos
+JOIN users ON user_id = photos.user_id;
