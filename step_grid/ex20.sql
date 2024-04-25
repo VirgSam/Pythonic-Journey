@@ -34,6 +34,6 @@ VALUES
 ('Affair at Styles',3);
 
 -- Query to join tables and print title of book and name of author
-SELECT name, title
+SELECT title,name 
 FROM authors
 JOIN books on books.author_id = authors.id;
