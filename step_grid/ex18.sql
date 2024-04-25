@@ -273,3 +273,7 @@ JOIN photos ON photo_id = comments.photo_id;
 SELECT url, username
 FROM  photos
 JOIN users ON user_id = photos.user_id;
+
+-- Insert null user into photos
+INSERT INTO photos(url,user_id)
+VALUES ('https://banner.jpg',NULL);
