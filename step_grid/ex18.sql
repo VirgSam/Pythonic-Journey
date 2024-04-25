@@ -95,3 +95,9 @@ SELECT * FROM photos;
 DROP TABLE photos;
 -- delete table users
 DROP TABLE users;
+
+-- Create new table users
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50)
+);
