@@ -24,3 +24,11 @@ VALUES
 ('Stephen King '),
 ('Agatha Christie'),
 ('Dr Seuss ');
+
+-- Insert into books table
+INSERT INTO books(title,author_id)
+VALUES
+('It',2),
+('Chamber of Secrets',1),
+('Cat and the Hat',4),
+('Affair at Styles',3);
