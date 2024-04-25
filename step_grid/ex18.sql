@@ -258,3 +258,8 @@ VALUES
 SELECT contents,username
 FROM comments
 JOIN users ON users.id = comments.user_id;
+
+-- Using joing in queries
+SELECT contents,username, photo_id
+FROM comments
+JOIN users ON users.id = comments.user_id;
