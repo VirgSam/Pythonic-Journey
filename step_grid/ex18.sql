@@ -91,5 +91,7 @@ VALUES
 DELETE FROM users where id = 4;
 SELECT * FROM photos; 
 
--- drop table photos
+-- delete table photos
 DROP TABLE photos;
+-- delete table users
+DROP TABLE users;
