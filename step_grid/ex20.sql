@@ -32,3 +32,8 @@ VALUES
 ('Chamber of Secrets',1),
 ('Cat and the Hat',4),
 ('Affair at Styles',3);
+
+-- Query to join tables and print title of book and name of author
+SELECT name, title
+FROM authors
+JOIN books on books.author_id = authors.id;
