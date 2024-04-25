@@ -9,3 +9,10 @@ CREATE TABLE authors(
     id SERIAL PRIMARY KEY,
     name VARCHAR(50)
 );
+
+-- Create table books
+CREATE TABLE books(
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(100),
+    author_id INTEGER REFERENCES authors(id) ON DELETE CASCADE
+);
