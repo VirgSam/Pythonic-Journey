@@ -277,3 +277,8 @@ JOIN users ON user_id = photos.user_id;
 -- Insert null user into photos
 INSERT INTO photos(url,user_id)
 VALUES ('https://banner.jpg',NULL);
+
+-- Query using left Join statement
+SELECT url, username
+FROM  photos
+LEFT JOIN users ON user_id = photos.user_id;
