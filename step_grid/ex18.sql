@@ -90,3 +90,6 @@ VALUES
 -- Testing out deletions constraints 2
 DELETE FROM users where id = 4;
 SELECT * FROM photos; 
+
+-- drop table photos
+DROP TABLE photos;
