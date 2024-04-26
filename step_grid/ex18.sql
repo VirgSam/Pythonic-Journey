@@ -286,3 +286,8 @@ LEFT JOIN users ON user_id = photos.user_id;
 -- expanding on outputs of various join statments
 INSERT INTO users(username)
 VALUES('Nicole');
+
+-- Select every record using right join
+SELECT url,username
+FROM photos
+RIGHT JOIN users ON users.id = photos.user_id;
