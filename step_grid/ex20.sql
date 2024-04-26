@@ -37,3 +37,8 @@ VALUES
 SELECT title,name 
 FROM authors
 JOIN books on books.author_id = authors.id;
+
+-- perform full outer join on authors and books
+SELECT title, name 
+FROM books
+FULL JOIN authors ON books.author_id = authors.id;
