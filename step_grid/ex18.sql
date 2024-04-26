@@ -282,3 +282,7 @@ VALUES ('https://banner.jpg',NULL);
 SELECT url, username
 FROM  photos
 LEFT JOIN users ON user_id = photos.user_id;
+
+-- expanding on outputs of various join statments
+INSERT INTO users(username)
+VALUES('Nicole');
