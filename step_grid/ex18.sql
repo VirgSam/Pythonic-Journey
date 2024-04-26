@@ -291,3 +291,8 @@ VALUES('Nicole');
 SELECT url,username
 FROM photos
 RIGHT JOIN users ON users.id = photos.user_id;
+
+-- Select every record using full join
+SELECT url,username
+FROM photos
+FULL JOIN users ON users.id = photos.user_id;
