@@ -303,7 +303,7 @@ FROM comments
 JOIN photos ON photos.id = comments.photo_id
 WHERE comments.user_id = photos.user_id;
 
--- select url,content and username where user_id is identical
+-- select url,content and username where user_id is identical: three way join
 SELECT url,contents, username
 FROM comments
 JOIN photos ON photos.id = comments.photo_id
