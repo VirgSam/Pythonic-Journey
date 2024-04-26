@@ -296,3 +296,9 @@ RIGHT JOIN users ON users.id = photos.user_id;
 SELECT url,username
 FROM photos
 FULL JOIN users ON users.id = photos.user_id;
+
+-- select url and content where user_id is identical
+SELECT url,contents
+FROM comments
+JOIN photos ON photos.id = comments.photo_id
+WHERE comments.user_id = photos.user_id;
