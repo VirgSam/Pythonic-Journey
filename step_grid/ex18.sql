@@ -323,3 +323,6 @@ FROM comments;
 
 SELECT AVG(id)
 FROM comments;
+
+SELECT COUNT(id)
+FROM comments;
