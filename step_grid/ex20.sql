@@ -72,3 +72,10 @@ CREATE TABLE reviews(
     reviewer_id INTEGER,
     book_id INTEGER REFERENCES books(id) ON DELETE CASCADE
 );
+
+-- Insert new values into table reviews
+INSERT INTO reviews(ratings,reviewer_id,book_id)
+VALUES
+(3,1,2),
+(4,2,1),
+(5,3,3);
