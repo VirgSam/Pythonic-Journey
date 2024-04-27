@@ -42,3 +42,11 @@ JOIN books on books.author_id = authors.id;
 SELECT title, name 
 FROM books
 FULL JOIN authors ON books.author_id = authors.id;
+
+/*Three way join exercise
+Write a query that will return the title of each book, 
+along with the name of the author, and the rating of a review.  
+Only show rows where the author of the book is also the author of the review.  */
+
+-- Delete table books
+DROP TABLE books;
