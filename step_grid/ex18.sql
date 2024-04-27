@@ -329,3 +329,8 @@ FROM comments;
 
 SELECT SUM(id)
 FROM comments;
+
+-- Using aggregate functions with group by
+SELECT user_id, MAX(id)
+FROM comments
+GROUP BY user_id;
