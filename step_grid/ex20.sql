@@ -64,3 +64,11 @@ VALUES
 ('The Dark Tower',1),
 ('Affair At Stylest',2),
 ('Chamber of Secrets',3);
+
+-- Create table reviews
+CREATE TABLE reviews(
+    id SERIAL PRIMARY KEY,
+    ratings INTEGER,
+    reviewer_id INTEGER,
+    book_id INTEGER REFERENCES books(id) ON DELETE CASCADE
+);
