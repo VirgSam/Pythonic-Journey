@@ -57,3 +57,10 @@ CREATE TABLE books(
     title VARCHAR(100),
     author_id INTEGER REFERENCES authors(id) ON DELETE CASCADE
 );
+
+-- Insert new values into table books
+INSERT INTO books(title,author_id)
+VALUES
+('The Dark Tower',1),
+('Affair At Stylest',2),
+('Chamber of Secrets',3);
