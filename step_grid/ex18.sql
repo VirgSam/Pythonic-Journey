@@ -334,3 +334,8 @@ FROM comments;
 SELECT user_id, MAX(id)
 FROM comments
 GROUP BY user_id;
+
+-- Using aggregate function count with group by 
+SELECT user_id, COUNT(id)
+FROM comments
+GROUP BY user_id;
