@@ -339,3 +339,8 @@ GROUP BY user_id;
 SELECT user_id, COUNT(id)
 FROM comments
 GROUP BY user_id;
+
+-- Using aggregate function count(*) for null columns
+SELECT user_id, COUNT(id)
+FROM comments
+GROUP BY user_id;
