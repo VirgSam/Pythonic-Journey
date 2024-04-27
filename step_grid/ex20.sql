@@ -84,4 +84,4 @@ VALUES
 SELECT title, name, ratings
 FROM reviews
 JOIN books ON books.id = reviews.book_id
-JOIN authors ON author_id = books.author_id and authors.id = reviews.reviewer_id;
+JOIN authors ON authors.id = books.author_id and authors.id = reviews.reviewer_id;
