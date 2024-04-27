@@ -79,3 +79,9 @@ VALUES
 (3,1,2),
 (4,2,1),
 (5,3,3);
+
+-- Perform three way join
+SELECT title, name, ratings
+FROM reviews
+JOIN books ON books.id = reviews.book_id
+JOIN authors ON author_id = books.author_id and authors.id = reviews.reviewer_id;
