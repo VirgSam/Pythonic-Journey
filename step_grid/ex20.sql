@@ -50,3 +50,10 @@ Only show rows where the author of the book is also the author of the review.  *
 
 -- Delete table books
 DROP TABLE books;
+
+-- Create table books
+CREATE TABLE books(
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(100),
+    author_id INTEGER REFERENCES authors(id) ON DELETE CASCADE
+);
