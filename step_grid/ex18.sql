@@ -341,6 +341,8 @@ FROM comments
 GROUP BY user_id;
 
 -- Using aggregate function count(*) for null columns
+SELECT COUNT(user_id) FROM photos;
+SELECT COUNT(*) FROM photos;
 SELECT user_id, COUNT(id)
 FROM comments
 GROUP BY user_id;
