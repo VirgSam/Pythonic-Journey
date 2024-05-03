@@ -729,3 +729,8 @@ VALUES
 	(27, 56, false),
 	(36, 95, false),
 	(3, 32, true);
+
+    -- Write a query to print the number of paid and unpaid orders.
+    SELECT paid, COUNT(*)
+    FROM orders
+    GROUP BY paid;
