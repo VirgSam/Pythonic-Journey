@@ -127,3 +127,10 @@ VALUES
 SELECT author_id, COUNT(*)
 FROM books
 GROUP BY author_id;
+
+-- Grouping with a join
+/* Write a query that will print an author's name and the number of books they have authored.*/
+Select name, count(*)
+from books
+join authors on authors.id = books.author_id
+GROUP by authors.name;
