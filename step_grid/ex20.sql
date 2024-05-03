@@ -144,3 +144,13 @@ FROM comments
 WHERE photo_id < 3
 GROUP BY photo_id
 HAVING COUNT(*)>2;
+
+/* Find the users(user_id) where the user has commented
+   on the first 50 photos and the user added more than 20
+   comments on those photos */
+SELECT user_id, COUNT(*)
+FROM comments
+WHERE photo_id < 50
+GROUP BY user_id
+HAVING COUNT(*)>20;
+
