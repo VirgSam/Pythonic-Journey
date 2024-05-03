@@ -135,22 +135,5 @@ FROM books
 JOIN authors ON authors.id = books.author_id
 GROUP BY authors.name;
 
---Grouping with the Having statement for filtering
-/* Find the number of comments for each photo where
-   where the photo id is less than 3 an dthe photo has 
-   more then 2 comments*/
-SELECT photo_id, COUNT(*)
-FROM comments
-WHERE photo_id < 3
-GROUP BY photo_id
-HAVING COUNT(*)>2;
 
-/* Find the users(user_id) where the user has commented
-   on the first 50 photos and the user added more than 20
-   comments on those photos */
-SELECT user_id, COUNT(*)
-FROM comments
-WHERE photo_id < 50
-GROUP BY user_id
-HAVING COUNT(*)>20;
 
