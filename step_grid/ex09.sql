@@ -58,3 +58,9 @@ VALUES
 ('Galaxy S','Samsung',299,2359),
 ('S5620 Monte','Samsung',250,2385),
 ('Wave S8500','Samsung',175,9259);
+
+-- Query request
+SELECT manufacturer, SUM(price*units_sold)
+FROM phones
+GROUP BY manufacturer
+HAVING SUM(price*units_sold)> 2000000;
