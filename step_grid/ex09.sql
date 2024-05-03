@@ -41,3 +41,12 @@ where manufacturer = 'Samsung';
 
 -- Write query here to select all rows and columns from phones
 select * from phones;
+
+-- Practise exercise on Having
+/*
+Given a table of phones, print the names of manufacturers and total revenue (price * units_sold) for all phones.  
+Only print the manufacturers who have revenue greater than 2,000,000 for all the phones they sold.
+*/
+UPDATE phones
+SET units_sold = 7543
+WHERE name = 'N8';
