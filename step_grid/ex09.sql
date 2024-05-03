@@ -47,6 +47,14 @@ select * from phones;
 Given a table of phones, print the names of manufacturers and total revenue (price * units_sold) for all phones.  
 Only print the manufacturers who have revenue greater than 2,000,000 for all the phones they sold.
 */
+-- update N8 value
 UPDATE phones
 SET units_sold = 7543
 WHERE name = 'N8';
+
+-- Insert samsung phones into table
+INSERT INTO phones(name,manufacturer,price,units_sold)
+VALUES
+('Galaxy S','Samsung',299,2359),
+('S5620 Monte','Samsung',250,2385),
+('Wave S8500','Samsung',175,9259);
