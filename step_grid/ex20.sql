@@ -130,7 +130,14 @@ GROUP BY author_id;
 
 -- Grouping with a join
 /* Write a query that will print an author's name and the number of books they have authored.*/
-Select name, count(*)
-from books
-join authors on authors.id = books.author_id
-GROUP by authors.name;
+SELECT name, count(*)
+FROM books
+JOIN authors ON authors.id = books.author_id
+GROUP BY authors.name;
+
+--Grouping with the Having statement for filtering
+SELECT photo_id, COUNT(*)
+FROM comments
+WHERE photo_id < 3
+GROUP BY photo_id
+HAVING COUNT(*)>2;
