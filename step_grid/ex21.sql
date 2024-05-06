@@ -773,3 +773,9 @@ VALUES
 	SELECT *
 	FROM users
 	LIMIT 10;
+
+	-- Query get the 5 least expensive products?
+	SELECT *
+	FROM products
+	ORDER BY price
+	LIMIT 5;
