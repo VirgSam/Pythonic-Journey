@@ -768,3 +768,8 @@ VALUES
 	SELECT *
 	FROM users
 	OFFSET 40;
+
+	-- The basics of Sorting using LIMIT statement (Similar to head function in pandas)
+	SELECT *
+	FROM users
+	LIMIT 10;
