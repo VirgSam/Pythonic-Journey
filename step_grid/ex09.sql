@@ -113,4 +113,19 @@ INTERSECT
     FROM products
     ORDER BY price/weight DESC
     LIMIT 4
+);
+
+-- Using the Except statement
+(
+   SELECT *
+   FROM products
+   ORDER BY price DESC
+   LIMIT 4 
 )
+EXCEPT
+(
+    SELECT *
+    FROM products
+    ORDER BY price/weight DESC
+    LIMIT 4
+);
