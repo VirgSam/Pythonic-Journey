@@ -64,3 +64,11 @@ SELECT manufacturer, SUM(price*units_sold)
 FROM phones
 GROUP BY manufacturer
 HAVING SUM(price*units_sold)> 2000000;
+
+-- Practise exercise on Sorting, Offsetting and Limiting
+/*Write a query that shows the names of only the second and third most expensive phones.*/
+SELECT name
+FROM phones
+ORDER BY price DESC
+LIMIT 2
+OFFSET 1;
