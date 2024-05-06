@@ -779,3 +779,9 @@ VALUES
 	FROM products
 	ORDER BY price
 	LIMIT 5;
+
+	-- Query get the 5 most expensive products?
+	SELECT *
+	FROM products
+	ORDER BY price DESC
+	LIMIT 5;
