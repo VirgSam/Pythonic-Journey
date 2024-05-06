@@ -742,3 +742,8 @@ VALUES
 	SELECT first_name, last_name, paid
 	FROM users
 	JOIN orders ON orders.user_id = users.id;
+
+	-- The basics of sorting using ORDER BY statement
+	SELECT *
+	FROM products
+	ORDER BY price;
