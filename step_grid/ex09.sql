@@ -72,3 +72,16 @@ FROM phones
 ORDER BY price DESC
 LIMIT 2
 OFFSET 1;
+
+-- Write a query to find 4 products with the highest price 
+-- and the 4 products with the highest price/weight ratio
+SELECT *
+FROM products
+ORDER BY price DESC
+LIMIT 4;
+
+SELECT *
+FROM products
+ORDER BY price/weight DESC
+LIMIT 4;
+
