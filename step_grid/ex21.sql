@@ -857,3 +857,12 @@ EXCEPT
     LIMIT 4
 );
 
+/*Using subqueries
+List the name and price of all products that are more expensivve that all products in 'Toys' department*/
+SELECT name,price
+FROM products
+WHERE price > (
+	SELECT MAX(price) 
+	FROM products
+	WHERE department = 'Toys'
+);
