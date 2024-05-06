@@ -757,3 +757,14 @@ VALUES
 	SELECT *
 	FROM products
 	ORDER BY name;
+
+	-- The basics of Sorting using muötiple columns
+	SELECT *
+	FROM products
+	ORDER BY price, weight DESC;
+
+	-- The basics of Sorting using OFFSET statement (skip a certain number of rows)
+	SELECT COUNT(*) from users;
+	SELECT *
+	FROM users
+	OFFSET 40;
