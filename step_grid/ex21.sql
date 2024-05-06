@@ -792,3 +792,10 @@ VALUES
 	ORDER BY price DESC
 	LIMIT 5
 	OFFSET 1;
+
+	-- Using LIMIT and OFFSET statements to show only 20 records per page view
+	SELECT *
+	FROM products
+	ORDER BY price DESC
+	LIMIT 20
+	OFFSET 0;
