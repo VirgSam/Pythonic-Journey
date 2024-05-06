@@ -752,3 +752,8 @@ VALUES
 	SELECT *
 	FROM products
 	ORDER BY price DESC;
+
+	-- The basics of Sorting using a non integer column
+	SELECT *
+	FROM products
+	ORDER BY name;
