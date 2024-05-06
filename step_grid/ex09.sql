@@ -73,63 +73,6 @@ ORDER BY price DESC
 LIMIT 2
 OFFSET 1;
 
--- Write a query to find 4 products with the highest price 
--- and the 4 products with the highest price/weight ratio
-SELECT *
-FROM products
-ORDER BY price DESC
-LIMIT 4;
-
-SELECT *
-FROM products
-ORDER BY price/weight DESC
-LIMIT 4;
-
--- combine both queries with the union statement
-(
-SELECT *
-FROM products
-ORDER BY price DESC
-LIMIT 4
-)
-UNION
-(
-SELECT *
-FROM products
-ORDER BY price/weight DESC
-LIMIT 4
-);
-
--- Using the intersect statement
-(
-   SELECT *
-   FROM products
-   ORDER BY price DESC
-   LIMIT 4 
-)
-INTERSECT
-(
-    SELECT *
-    FROM products
-    ORDER BY price/weight DESC
-    LIMIT 4
-);
-
--- Using the Except statement
-(
-   SELECT *
-   FROM products
-   ORDER BY price DESC
-   LIMIT 4 
-)
-EXCEPT
-(
-    SELECT *
-    FROM products
-    ORDER BY price/weight DESC
-    LIMIT 4
-);
-
 /* Practise exercise
 Write a query that will print the manufacturer of phones where the phone's price is less than 170.  
 Also print all manufacturer that have created more than two phones.*/
