@@ -129,3 +129,19 @@ EXCEPT
     ORDER BY price/weight DESC
     LIMIT 4
 );
+
+/* Practise exercise
+Write a query that will print the manufacturer of phones where the phone's price is less than 170.  
+Also print all manufacturer that have created more than two phones.*/
+(
+    SELECT manufacturer
+    FROM phones
+    WHERE price < 170
+)
+UNION
+(
+    SELECT manufacturer
+    FROM phones
+    GROUP BY manufacturer
+    HAVING count(*)>2
+);
