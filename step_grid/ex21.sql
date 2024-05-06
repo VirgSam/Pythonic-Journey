@@ -747,3 +747,8 @@ VALUES
 	SELECT *
 	FROM products
 	ORDER BY price;
+
+	-- The basics of sorting using ORDER BY DESC statement
+	SELECT *
+	FROM products
+	ORDER BY price DESC;
