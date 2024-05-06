@@ -785,3 +785,10 @@ VALUES
 	FROM products
 	ORDER BY price DESC
 	LIMIT 5;
+
+	-- The basics of Sorting using LIMIT and OFFSET statements (in convention use limit statements first)
+	SELECT *
+	FROM products
+	ORDER BY price DESC
+	LIMIT 5
+	OFFSET 1;
