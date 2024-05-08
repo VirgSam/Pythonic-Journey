@@ -868,7 +868,8 @@ WHERE price > (
 );
 
 /*Understanding subqueries
-find all products where the price is greater than 876 dollars*/
+find all products where the price is greater than 876 dollars
+and compare these products to highest price in table*/
 -- first find the max price in products table
 SELECT MAX(price)
 FROM products;
@@ -880,3 +881,13 @@ SELECT name,price, (
 )
 FROM products
 WHERE price > 876;
+
+/*Understanding subqueries
+find all products where the price is greater than 876 dollars
+and compare these products to the price of product with ID 3*/
+-- first investigate what the table will look like.
+SELECT price
+FROM products
+WHERE id = 3;
+
+-- insert above as subquery into a complex query
