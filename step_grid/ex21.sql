@@ -942,3 +942,18 @@ FROM (
 	FROM orders
 	GROUP BY user_id
 ) AS p;
+
+-- Using Subqueries with a join clause
+SELECT user_id 
+FROM orders
+WHERE product_id = 3;
+
+-- the second part
+SELECT first_name
+FROM users
+JOIN (
+	SELECT user_id 
+	FROM orders
+	WHERE product_id = 3
+) AS o
+ON o.user_id = users.id;
