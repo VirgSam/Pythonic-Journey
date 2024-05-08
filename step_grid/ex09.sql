@@ -94,8 +94,13 @@ Write a query that prints the name and price for each phone.
 In addition, print out the ratio of the phones price against max price of all phones (so price / max price).  
 Rename this third column to price_ratio
 */
--- write first the subquery
+-- write first the query
 SELECT MAX(price)
 FROM phones;
 
--- w
+-- insert above query into subquery
+SELECT name, price, price/(
+    SELECT MAX(price)
+FROM phones
+) AS price_ratio
+FROM phones;
