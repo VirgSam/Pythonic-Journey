@@ -898,3 +898,13 @@ SELECT name,price, (
 )
 FROM products
 WHERE price > 876;
+
+-- writing subqueries into the from statement
+SELECT name,price/weight AS price_weight_ratio
+FROM products;
+
+-- Always rename newly created table from above to avoid errors
+-- when accessing the table with subquerying.
+SELECT name,price/weight AS price_weight_ratio
+FROM products 
+AS pw;
