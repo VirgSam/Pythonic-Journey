@@ -928,3 +928,17 @@ FROM (
 	FROM products
 ) 
 AS p;
+
+-- another use case for using subqueries
+-- first query
+SELECT user_id, COUNT(*)
+FROM orders
+GROUP BY user_id;
+
+-- second query: get the average of orders per user
+SELECT AVG(p.order_count)
+FROM (
+	SELECT user_id, COUNT(*) AS order_count
+	FROM orders
+	GROUP BY user_id
+) AS p;
