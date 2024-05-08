@@ -873,3 +873,10 @@ find all products where the price is greater than 876 dollars*/
 SELECT MAX(price)
 FROM products;
 
+-- insert above as subquery into another query
+SELECT name,price, (
+	SELECT MAX(price)
+	FROM products
+)
+FROM products
+WHERE price > 876;
