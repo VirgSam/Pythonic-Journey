@@ -972,3 +972,17 @@ WHERE product_id IN (
 	FROM products
 	WHERE price/weight > 50
 );
+
+/*Show the name of all products with a price greater than the average
+product price*/
+-- first part of subquery
+SELECT AVG(price)
+FROM products;
+
+-- second part
+SELECT name
+FROM products
+WHERE price >(
+	SELECT AVG(price)
+	FROM products
+);
