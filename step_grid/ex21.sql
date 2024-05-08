@@ -908,3 +908,11 @@ FROM products;
 SELECT name,price/weight AS price_weight_ratio
 FROM products 
 AS pw;
+
+-- writing subqueries in the FROM clause
+SELECT name, price_weight_ratio
+FROM (
+	SELECT name,price/weight AS price_weight_ratio
+	FROM products
+)
+WHERE price_weight_ratio > 5;
