@@ -980,7 +980,7 @@ SELECT AVG(price)
 FROM products;
 
 -- second part
-SELECT name
+SELECT name, price
 FROM products
 WHERE price >(
 	SELECT AVG(price)
