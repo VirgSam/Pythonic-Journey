@@ -916,3 +916,15 @@ FROM (
 	FROM products
 ) AS pw
 WHERE price_weight_ratio > 5;
+
+-- writing subqueries in the FROM clause 2
+SELECT MAX(price)
+FROM products;
+
+-- using the * to get all values from newly created table
+SELECT *
+FROM (
+	SELECT MAX(price)
+	FROM products
+) 
+AS p;
