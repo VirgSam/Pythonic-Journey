@@ -866,3 +866,10 @@ WHERE price > (
 	FROM products
 	WHERE department = 'Toys'
 );
+
+/*Understanding subqueries
+find all products where the price is greater than 876 dollars*/
+-- first find the max price in products table
+SELECT MAX(price)
+FROM products;
+
