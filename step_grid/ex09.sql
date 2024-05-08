@@ -104,3 +104,12 @@ SELECT name, price, price/(
 FROM phones
 ) AS price_ratio
 FROM phones;
+
+/* Practise exercise subquery
+Calculate the average price of phones for each manufacturer.  
+Then print the highest average price. 
+Rename this value to max_average_price*/
+SELECT MAX(p.average_price) AS max_average_price
+FROM (SELECT AVG(price) AS average_price
+FROM phones
+GROUP BY manufacturer) AS p;
