@@ -88,3 +88,14 @@ UNION
     GROUP BY manufacturer
     HAVING count(*)>2
 );
+
+/* Practise exercise 
+Write a query that prints the name and price for each phone.  
+In addition, print out the ratio of the phones price against max price of all phones (so price / max price).  
+Rename this third column to price_ratio
+*/
+-- write first the subquery
+SELECT MAX(price)
+FROM phones;
+
+-- w
