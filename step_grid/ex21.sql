@@ -957,3 +957,18 @@ JOIN (
 	WHERE product_id = 3
 ) AS o
 ON o.user_id = users.id;
+
+-- Using Subqueries with a where clause
+-- first part
+SELECT id
+FROM products
+WHERE price/weight > 50;
+
+-- the second part
+SELECT id
+FROM orders
+WHERE product_id IN (
+	SELECT id
+	FROM products
+	WHERE price/weight > 50
+);
