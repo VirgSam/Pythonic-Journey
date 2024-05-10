@@ -1081,3 +1081,7 @@ FROM products AS p1;
 
 -- Using a select without a from via sub queries
 SELECT (SELECT MAX(price) FROM products ), (SELECT MIN(price) FROM products);
+
+-- Using the DISTINCT statement
+SELECT DISTINCT department
+FROM products;
