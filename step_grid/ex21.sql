@@ -986,3 +986,10 @@ WHERE price >(
 	SELECT AVG(price)
 	FROM products
 );
+
+/*Practice exercise
+Show the name of all products that are not in the same department as products
+with a price less than 100*/
+SELECT department
+FROM products
+WHERE price < 100;
