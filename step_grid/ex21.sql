@@ -1014,11 +1014,20 @@ WHERE department NOT IN (
  FROM products
  WHERE department = 'Industrial';
 
- -- second part
+ -- second part : wrong answer
  SELECT name, department,price
  FROM products
  WHERE price > (
 	SELECT SUM(price)
+	FROM products
+	WHERE department = 'Industrial'
+ );
+
+ -- Third part: correct answer
+ SELECT name, department,price
+ FROM products
+ WHERE price > ALL (
+	SELECT price
 	FROM products
 	WHERE department = 'Industrial'
  );
