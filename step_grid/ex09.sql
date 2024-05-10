@@ -131,3 +131,13 @@ WHERE price >(
     FROM phones
     WHERE name = 'S5620 Monte'
 );
+
+/*
+ Practice Your Subqueries!
+Write a query that prints the name of all phones that have a price greater than all phones made by Samsung.
+*/
+-- First part
+SELECT price
+FROM phones
+WHERE manufacturer = 'Samsung';
+
