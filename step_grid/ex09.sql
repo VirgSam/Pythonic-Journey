@@ -165,5 +165,5 @@ SELECT (
  Write a query that will print the number of
  unique phone manufacturers
  */
- SELECT DISTINCT manufacturer 
+ SELECT COUNT(DISTINCT manufacturer )
  FROM  phones;
