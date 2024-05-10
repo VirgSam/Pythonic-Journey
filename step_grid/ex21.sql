@@ -993,3 +993,12 @@ with a price less than 100*/
 SELECT department
 FROM products
 WHERE price < 100;
+
+-- second part of subquery
+SELECT name
+FROM products
+WHERE department NOT IN (
+	SELECT department
+	FROM products
+	WHERE price < 100
+);
