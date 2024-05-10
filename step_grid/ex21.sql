@@ -1051,7 +1051,7 @@ WHERE department NOT IN (
 	WHERE department = 'Industrial'
  );
 
- /*Practice exercise
+ /*Practice exercise corelated subquries
 	Show the name,department, and price
 	of the most expensive product in each department
 	*/
