@@ -1050,3 +1050,21 @@ WHERE department NOT IN (
 	FROM products
 	WHERE department = 'Industrial'
  );
+
+ /*Practice exercise
+	Show the name,department, and price
+	of the most expensive product in each department
+	*/
+	-- first part
+	SELECT MAX(price)
+	FROM products AS p2
+	WHERE p2.department = p1.department; -- it wont work because we have not defined p1
+
+	-- second part
+	SELECT name,department,price
+	FROM products AS p1
+	WHERE p1.price = (
+		SELECT MAX(price)
+		FROM products AS p2
+		WHERE p2.department = p1.department
+	);
