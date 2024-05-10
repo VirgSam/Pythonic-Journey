@@ -113,3 +113,21 @@ SELECT MAX(p.average_price) AS max_average_price
 FROM (SELECT AVG(price) AS average_price
 FROM phones
 GROUP BY manufacturer) AS p;
+
+/*Subquery Where's
+Write a query that prints out the name and price of phones that have a price greater 
+than the Samsung S5620 Monte.
+*/
+-- first part
+SELECT price
+FROM phones
+WHERE name = 'S5620 Monte';
+
+-- second part
+SELECT name,price
+FROM phones 
+WHERE price >(
+    SELECT price
+    FROM phones
+    WHERE name = 'S5620 Monte'
+);
