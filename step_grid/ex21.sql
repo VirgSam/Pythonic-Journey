@@ -1002,3 +1002,23 @@ WHERE department NOT IN (
 	FROM products
 	WHERE price < 100
 );
+
+/*Practice exercise
+ Show the name, department, and price of
+ products that are more expensive
+ than all thee products in the industrial
+ department
+ */
+ -- first part of query
+ SELECT SUM(price)
+ FROM products
+ WHERE department = 'Industrial';
+
+ -- second part
+ SELECT name, department,price
+ FROM products
+ WHERE price > (
+	SELECT SUM(price)
+	FROM products
+	WHERE department = 'Industrial'
+ );
