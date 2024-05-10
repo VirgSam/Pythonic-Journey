@@ -1085,3 +1085,7 @@ SELECT (SELECT MAX(price) FROM products ), (SELECT MIN(price) FROM products);
 -- Using the DISTINCT statement
 SELECT DISTINCT department
 FROM products;
+
+-- Using the Greatest statement
+SELECT name,weight, GREATEST(30,2*weight) AS cost_to_ship
+FROM products;
