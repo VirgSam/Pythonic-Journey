@@ -1089,3 +1089,6 @@ FROM products;
 -- Using the Greatest statement
 SELECT name,weight, GREATEST(30,2*weight) AS cost_to_ship
 FROM products;
+
+-- Using the Least statement
+SELECT LEAST(1000,20,50,100);
