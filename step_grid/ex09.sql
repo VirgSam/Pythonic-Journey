@@ -160,3 +160,10 @@ SELECT (
         FROM phones)AS min_price,
        (SELECT AVG(price) 
        FROM phones)AS avg_price;
+
+/*Some practice with distinct
+ Write a query that will print the number of
+ unique phone manufacturers
+ */
+ SELECT DISTINCT manufacturer 
+ FROM  phones;
