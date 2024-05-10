@@ -1068,3 +1068,16 @@ WHERE department NOT IN (
 		FROM products AS p2
 		WHERE p2.department = p1.department
 	);
+/*Practice exercise corelated subquries 
+ Without using a join or a group by, print 
+ the number of orders for each product
+*/
+SELECT p1.name, (
+	SELECT COUNT(*)
+	FROM orders AS o1
+	WHERE o1.product_id = p1.id
+) AS num_orders
+FROM products AS p1;
+
+-- Using a select without a from via sub queries
+SELECT (SELECT MAX(price) FROM products ), (SELECT MIN(price) FROM products);
