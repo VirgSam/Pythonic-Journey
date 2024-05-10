@@ -995,7 +995,7 @@ FROM products
 WHERE price < 100;
 
 -- second part of subquery
-SELECT name
+SELECT name, department
 FROM products
 WHERE department NOT IN (
 	SELECT department
