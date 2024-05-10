@@ -1003,7 +1003,7 @@ WHERE department NOT IN (
 	WHERE price < 100
 );
 
-/*Practice exercise
+/*Practice exercise using ALL case
  Show the name, department, and price of
  products that are more expensive
  than all thee products in the industrial
@@ -1027,6 +1027,25 @@ WHERE department NOT IN (
  SELECT name, department,price
  FROM products
  WHERE price > ALL (
+	SELECT price
+	FROM products
+	WHERE department = 'Industrial'
+ );
+
+ /*Practice exercise using SOME case
+  Show the name of products that are
+  more expensive than at least
+  one product in the 'Industrial' department
+ */
+ -- first part
+ SELECT price
+ FROM products
+ WHERE department = 'Industrial'
+
+ -- second part
+ SELECT name,department,price
+ FROM products
+ WHERE price>SOME (
 	SELECT price
 	FROM products
 	WHERE department = 'Industrial'
