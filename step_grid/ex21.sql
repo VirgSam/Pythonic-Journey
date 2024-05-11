@@ -1129,3 +1129,8 @@ SET NOT NULL;
 ALTER TABLE products
 ALTER COLUMN weight
 SET NOT NULL;
+
+-- Applying default contrainsts
+ALTER TABLE products
+ALTER COLUMN price
+SET DEFAULT 999;
