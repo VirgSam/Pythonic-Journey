@@ -1150,3 +1150,7 @@ ADD UNIQUE (name,department);
 -- Add a validation check to price column
 ALTER TABLE products
 ADD CHECK (price >0);
+
+-- Add created_at timestamp
+ALTER TABLE orders
+ADD COLUMN created_at TIMESTAMP; 
