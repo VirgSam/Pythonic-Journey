@@ -1130,7 +1130,11 @@ ALTER TABLE products
 ALTER COLUMN weight
 SET NOT NULL;
 
--- Applying default contrainsts
+-- Applying default contraints
 ALTER TABLE products
 ALTER COLUMN price
 SET DEFAULT 999;
+
+-- Applying unique contraints to database
+ALTER TABLE products
+ADD UNIQUE(name);
