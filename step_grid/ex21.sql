@@ -1142,3 +1142,7 @@ ADD UNIQUE(name);
 -- Dropping constriants from database
 ALTER TABLE products
 DROP CONSTRAINT products_name_key;
+
+-- Add mutli-column uniqueness
+ALTER TABLE products
+ADD UNIQUE (name,department);
