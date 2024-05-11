@@ -1138,3 +1138,7 @@ SET DEFAULT 999;
 -- Applying unique contraints to database
 ALTER TABLE products
 ADD UNIQUE(name);
+
+-- Dropping constriants from database
+ALTER TABLE products
+DROP CONSTRAINT products_name_key;
