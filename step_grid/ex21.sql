@@ -1117,3 +1117,7 @@ FROM products;
 ALTER TABLE products
 ALTER COLUMN name
 SET NOT NULL;
+
+ALTER TABLE products
+ALTER COLUMN department
+SET NOT NULL;
