@@ -1112,3 +1112,8 @@ SELECT
 		ELSE 'cheap'
 	END
 FROM products;
+
+-- applying null constraints to tables
+ALTER TABLE products
+ALTER COLUMN name
+SET NOT NULL;
