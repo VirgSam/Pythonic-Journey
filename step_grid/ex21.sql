@@ -1146,3 +1146,7 @@ DROP CONSTRAINT products_name_key;
 -- Add mutli-column uniqueness
 ALTER TABLE products
 ADD UNIQUE (name,department);
+
+-- Add a validation check to price column
+ALTER TABLE products
+ADD CHECK (price >0);
