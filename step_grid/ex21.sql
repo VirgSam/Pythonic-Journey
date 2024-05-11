@@ -1154,3 +1154,7 @@ ADD CHECK (price >0);
 -- Add created_at timestamp
 ALTER TABLE orders
 ADD COLUMN created_at TIMESTAMP; 
+
+-- Add created_at est_delivery
+ALTER TABLE orders
+ADD COLUMN est_delivery TIMESTAMP;  
