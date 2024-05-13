@@ -53,5 +53,12 @@ Table caption_tags{
 
 }
 
+Table hashtags{
+    id SERIAL [pk, increment]
+    created_at TIMESTAMP
+    title VARCHAR(20)
+
+}
+
 
 
