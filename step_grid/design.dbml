@@ -29,7 +29,7 @@ Table comments {
 Table likes{
     id SERIAL [pk, increment]
     created_at TIMESTAMP
-    user_id INTEGER[ref: >users.id]
+    user_id INTEGER [ref: >users.id]
     comment_id INTEGER [ref: >comments.id]
     post_id INTEGER [ref: > posts.id]
 }
@@ -39,7 +39,7 @@ Table photo_tags{
     created_at TIMESTAMP
     updated_at TIMESTAMP
     post_id INTEGER [ref: > posts.id]
-    user_id INTEGER[ref: >users.id]
+    user_id INTEGER [ref: >users.id]
     x INTEGER
     y INTEGER
 
@@ -49,7 +49,7 @@ Table caption_tags{
     id SERIAL [pk, increment]
     created_at TIMESTAMP
     post_id INTEGER [ref: > posts.id]
-    user_id INTEGER[ref: >users.id]
+    user_id INTEGER [ref: >users.id]
 
 }
 
@@ -60,5 +60,8 @@ Table hashtags{
 
 }
 
-
-
+Table hashtags_posts{
+    id SERIAL [pk, increment]
+    hashtag_id INTEGER [ref: > hashtags.id]
+    post_id INTEGER [ref: > posts.id]
+}
