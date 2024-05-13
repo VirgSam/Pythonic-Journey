@@ -1158,3 +1158,7 @@ ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT '2000-NOV-23 01:00AM';
 -- Add created_at est_delivery
 ALTER TABLE orders
 ADD COLUMN est_delivery TIMESTAMP NOT NULL DEFAULT '2000-NOV-24 02:00AM';  
+
+-- Add a validation check over multiple columns
+ALTER TABLE orders
+ADD CHECK (created_at <est_delivery);
