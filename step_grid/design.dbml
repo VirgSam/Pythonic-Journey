@@ -1,3 +1,4 @@
+// https://dbdiagram.io/d/6642940e9e85a46d55bfdc82
 Table users {
   id SERIAL [pk, increment]
   created_at TIMESTAMP
