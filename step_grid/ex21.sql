@@ -1153,7 +1153,7 @@ ADD CHECK (price >0);
 
 -- Add created_at timestamp
 ALTER TABLE orders
-ADD COLUMN created_at TIMESTAMP; 
+ADD COLUMN created_at TIMESTAMP NOT NULL DEFAULT '2000-NOV-23 01:00AM';
 
 -- Add created_at est_delivery
 ALTER TABLE orders
