@@ -45,5 +45,13 @@ Table photo_tags{
 
 }
 
+Table caption_tags{
+    id SERIAL [pk, increment]
+    created_at TIMESTAMP
+    post_id INTEGER [ref: > posts.id]
+    user_id INTEGER[ref: >users.id]
+
+}
+
 
 
