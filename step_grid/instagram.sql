@@ -10,8 +10,7 @@ CREATE TABLE users(
 	password VARCHAR(50),
 	status VARCHAR(15),
 	CHECK(COALESCE(phone,email)IS NOT NULL),
-	CHECK(COALESCE(email,password)IS NOT NULL)
-	
+		
 );
 
 CREATE TABLE posts (
