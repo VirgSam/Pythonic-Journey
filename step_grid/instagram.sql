@@ -6,7 +6,7 @@ CREATE TABLE users(
 	bio VARCHAR(400),
 	avatar VARCHAR(200),
 	phone VARCHAR(25),
-	email VARCHAR(25),
+	email VARCHAR(45),
 	password VARCHAR(50),
 	status VARCHAR(15),
 	CHECK(COALESCE(phone,email)IS NOT NULL),
