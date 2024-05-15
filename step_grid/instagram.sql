@@ -136,6 +136,7 @@ SELECT *
 FROM users
 WHERE username = 'Emil30';
 
+-- With an index it took about 0.130 ms
 -- Second part of benchmarking
 EXPLAIN ANALYZE SELECT *
 FROM users
