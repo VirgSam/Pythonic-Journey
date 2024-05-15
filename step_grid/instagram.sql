@@ -149,3 +149,8 @@ DROP INDEX users_username_idx;
 EXPLAIN ANALYZE SELECT *
 FROM users
 WHERE username = 'Emil30';
+
+-- Downsides of Indexes, comes with storage capacity limitation and slowing down update speed
+CREATE INDEX ON users (username);
+SELECT pg_size_pretty(pg_relation_size('users')); -- uses 872kb
+SELECT pg_size_pretty(pg_relation_size('users_username_idx')); -- 184kb
