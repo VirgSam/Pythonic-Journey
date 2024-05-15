@@ -124,3 +124,6 @@ FROM pg_database;
 -- Show classes and individual objects in db
 SELECT *
 FROM pg_class;
+
+-- How to create an index on Table user(username)
+CREATE INDEX ON users (username);
