@@ -125,5 +125,8 @@ FROM pg_database;
 SELECT *
 FROM pg_class;
 
--- How to create an index on Table user(username)
+-- How to create an index on Table user(username) to speed up query retrieval
 CREATE INDEX ON users (username);
+
+-- How do delete an index
+DROP INDEX users_username_idx;
