@@ -154,3 +154,8 @@ WHERE username = 'Emil30';
 CREATE INDEX ON users (username);
 SELECT pg_size_pretty(pg_relation_size('users')); -- uses 872kb
 SELECT pg_size_pretty(pg_relation_size('users_username_idx')); -- 184kb
+
+-- Automatically created indexes on Primary keys and unique contraints by postgres
+SELECT relname, relkind
+FROM pg_class
+WHERE relkind = 'i';
