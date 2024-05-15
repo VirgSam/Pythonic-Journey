@@ -135,3 +135,8 @@ DROP INDEX users_username_idx;
 SELECT *
 FROM users
 WHERE username = 'Emil30';
+
+-- Second part of benchmarking
+EXPLAIN ANALYZE SELECT *
+FROM users
+WHERE username = 'Emil30';
