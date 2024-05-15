@@ -120,3 +120,7 @@ SHOW data_directory;
 -- Show current databases created and internal identifier for each
 SELECT oid,datname
 FROM pg_database;
+
+-- Show classes and individual objects in db
+SELECT *
+FROM pg_class;
