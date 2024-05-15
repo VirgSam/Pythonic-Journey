@@ -93,3 +93,14 @@ CREATE TABLE followers (
 	follower_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
 	UNIQUE(leader_id,follower_id)	
 );
+
+-- Practice query
+/* Join the users and post table
+   Show the username of use id 200 and the
+   captions of all related posts
+   they have
+*/
+SELECT username,caption
+FROM users
+JOIN posts ON posts.user_id = users.id
+WHERE posts.user_id = 200;
