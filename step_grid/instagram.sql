@@ -113,3 +113,6 @@ SELECT username, count(*)
 FROM users
 JOIN likes ON likes.user_id = users.id
 GROUP BY username;
+
+-- Understanding where Postgres stores data
+SHOW data_directory;
