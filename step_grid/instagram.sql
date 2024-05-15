@@ -141,3 +141,11 @@ WHERE username = 'Emil30';
 EXPLAIN ANALYZE SELECT *
 FROM users
 WHERE username = 'Emil30';
+
+-- Third part of benchmarking
+-- Without an index it took about 2.057 ms
+
+DROP INDEX users_username_idx;
+EXPLAIN ANALYZE SELECT *
+FROM users
+WHERE username = 'Emil30';
