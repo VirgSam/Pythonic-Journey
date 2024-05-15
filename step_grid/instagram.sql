@@ -130,3 +130,8 @@ CREATE INDEX ON users (username);
 
 -- How do delete an index
 DROP INDEX users_username_idx;
+
+-- Benchmarking Queries
+SELECT *
+FROM users
+WHERE username = 'Emil30';
