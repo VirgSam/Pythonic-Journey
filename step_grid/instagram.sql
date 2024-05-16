@@ -207,3 +207,19 @@ WHERE created_at > '2013-01-01';
 EXPLAIN SELECT *
 FROM likes
 WHERE created_at > '2013-01-01';
+
+--Common Table Expressions
+/*Practice exercise
+  Show  the username of users who were
+  tagged in a caption or photo before
+  January 7th 2010. also show the date 
+  they were tagged
+*/
+SELECT users.username, tags.created_at
+FROM users
+JOIN (
+	SELECT user_id, created_at FROM caption_tags
+	UNION ALL
+	SELECT user_id, created_at FROM photo_tags
+) AS tags ON tags.user_id = users.id
+WHERE tags.created_at < '2010-01-07';
