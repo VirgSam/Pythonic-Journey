@@ -167,8 +167,13 @@ FROM users
 JOIN comments ON comments.user_id = users.id
 WHERE username = 'Alyson14';
 
--- Part 2 review query plan and planning and execution times
+-- Part 2 review the query plan tree and planning and execution times
 EXPLAIN ANALYZE SELECT username,contents
 FROM users
 JOIN comments ON comments.user_id = users.id
 WHERE username = 'Alyson14';
+
+-- Part 3 how to review stats on all tables in your database
+SELECT *
+FROM pg_stats
+WHERE tablename = 'users';
