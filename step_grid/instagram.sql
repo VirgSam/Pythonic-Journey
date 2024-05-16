@@ -201,3 +201,9 @@ WHERE created_at < '2013-01-01';
 SELECT COUNT(*)
 FROM likes
 WHERE created_at > '2013-01-01';
+
+-- part 5
+-- what is the difference between part 3 nd 5
+EXPLAIN SELECT *
+FROM likes
+WHERE created_at > '2013-01-01';
