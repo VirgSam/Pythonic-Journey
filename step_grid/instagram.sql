@@ -189,3 +189,15 @@ WHERE created_at < '2013-01-01';
 EXPLAIN SELECT *
 FROM likes
 WHERE created_at < '2013-01-01';
+
+-- part 3
+CREATE INDEX likes_created_at_idx ON likes(created_at);
+EXPLAIN SELECT *
+FROM likes
+WHERE created_at < '2013-01-01';
+
+-- part 4 
+-- change < symbol what is the difference between part 1 and part 4
+SELECT COUNT(*)
+FROM likes
+WHERE created_at > '2013-01-01';
