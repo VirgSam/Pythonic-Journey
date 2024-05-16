@@ -215,6 +215,7 @@ WHERE created_at > '2013-01-01';
   January 7th 2010. also show the date 
   they were tagged
 */
+-- part 1
 SELECT users.username, tags.created_at
 FROM users
 JOIN (
@@ -222,4 +223,15 @@ JOIN (
 	UNION ALL
 	SELECT user_id, created_at FROM photo_tags
 ) AS tags ON tags.user_id = users.id
+WHERE tags.created_at < '2010-01-07';
+
+-- Part 2 with common table expressions using a 'WITH' statement
+WITH tags AS (
+    SELECT user_id, created_at FROM caption_tags
+	UNION ALL
+	SELECT user_id, created_at FROM photo_tags
+)
+SELECT users.username, tags.created_at
+FROM users
+JOIN tags ON tags.user_id = users.id
 WHERE tags.created_at < '2010-01-07';
