@@ -159,3 +159,10 @@ SELECT pg_size_pretty(pg_relation_size('users_username_idx')); -- 184kb
 SELECT relname, relkind
 FROM pg_class
 WHERE relkind = 'i';
+
+-- Query tuning
+-- Part 1
+SELECT username,contents
+FROM users
+JOIN comments ON comments.user_id = user.id
+WHERE username = 'Alyson14';
