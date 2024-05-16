@@ -164,5 +164,11 @@ WHERE relkind = 'i';
 -- Part 1
 SELECT username,contents
 FROM users
-JOIN comments ON comments.user_id = user.id
+JOIN comments ON comments.user_id = users.id
+WHERE username = 'Alyson14';
+
+-- Part 2 review query plan and planning and execution times
+EXPLAIN ANALYZE SELECT username,contents
+FROM users
+JOIN comments ON comments.user_id = users.id
 WHERE username = 'Alyson14';
