@@ -177,3 +177,11 @@ WHERE username = 'Alyson14';
 SELECT *
 FROM pg_stats
 WHERE tablename = 'users';
+
+-- Part 4 how to use the index
+-- part 1 
+-- count amount of likes in likes table 
+SELECT COUNT(*)
+FROM likes
+WHERE created_at < '2013-01-01';
+
