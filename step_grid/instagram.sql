@@ -317,3 +317,5 @@ CREATE OR REPLACE VIEW recent_posts AS (
 	ORDER BY created_at DESC
 	LIMIT 5
 );
+
+DROP VIEW recent_posts;
