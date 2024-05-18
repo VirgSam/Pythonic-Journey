@@ -275,3 +275,10 @@ JOIN (
 ) AS tags ON tags.user_id = users.id
 GROUP BY username
 ORDER BY COUNT(*) DESC
+
+-- part 2
+CREATE VIEW tags AS (
+	SELECT id, created_at, user_id, post_id, 'photo_tag' AS type FROM photo_tags
+	UNION ALL
+	SELECT id, created_at, user_id, post_id, 'caption_tag' AS type FROM caption_tags
+);
