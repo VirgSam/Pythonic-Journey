@@ -300,3 +300,8 @@ CREATE VIEW recent_posts AS (
 -- part 2
 SELECT * 
 FROM recent_posts;
+
+-- part 3 show users who created 10 most recent posts
+SELECT * 
+FROM recent_posts
+JOIN users on users.id= recent_posts.user_id;
