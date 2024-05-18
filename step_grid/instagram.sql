@@ -282,3 +282,10 @@ CREATE VIEW tags AS (
 	UNION ALL
 	SELECT id, created_at, user_id, post_id, 'caption_tag' AS type FROM caption_tags
 );
+
+-- part 3
+SELECT username, COUNT(*)
+FROM users
+JOIN tags ON tags.user_id = users.id
+GROUP BY username
+ORDER BY COUNT(*) DESC
