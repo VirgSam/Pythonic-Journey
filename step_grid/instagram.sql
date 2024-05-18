@@ -305,3 +305,7 @@ FROM recent_posts;
 SELECT * 
 FROM recent_posts
 JOIN users on users.id= recent_posts.user_id;
+
+SELECT username 
+FROM recent_posts
+JOIN users on users.id= recent_posts.user_id;
