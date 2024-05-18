@@ -262,3 +262,16 @@ FROM countdown;
 	JOIN users ON users.id = suggestions.leader_id
 	WHERE depth > 1
 	LIMIT 30;
+
+-- Using views
+/* Show the most popular users - the users with the most tags*/
+-- part 1
+SELECT username, COUNT(*)
+FROM users
+JOIN (
+	SELECT user_id FROM photo_tags
+	UNION ALL
+	SELECT user_id FROM  caption_tags
+) AS tags ON tags.user_id = users.id
+GROUP BY username
+ORDER BY COUNT(*) DESC
