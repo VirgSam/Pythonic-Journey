@@ -289,3 +289,11 @@ FROM users
 JOIN tags ON tags.user_id = users.id
 GROUP BY username
 ORDER BY COUNT(*) DESC
+
+/*Creating a view for 10 most recent posts to be reuseable template*/
+CREATE VIEW recent_posts AS (
+	SELECT *
+	FROM posts
+	ORDER BY created_at DESC
+	LIMIT 10
+);
