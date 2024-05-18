@@ -297,3 +297,6 @@ CREATE VIEW recent_posts AS (
 	ORDER BY created_at DESC
 	LIMIT 10
 );
+-- part 2
+SELECT * 
+FROM recent_posts;
