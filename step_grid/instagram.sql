@@ -371,3 +371,21 @@ FROM weekly_likes;
 REFRESH MATERIALIZED VIEW weekly_likes;
 
 --- Concurrency and Transactions
+INSERT INTO accounts(name, balance)
+VALUES
+	('Gia',100),
+	('Alyson',100);
+
+BEGIN; -- begin trxn
+UPDATE accounts
+SET balance = balance - 50
+WHERE name = 'Alyson';	
+
+SELECT * FROM accounts;
+
+UPDATE accounts
+SET balance = balance + 50
+WHERE name = 'Gia';
+
+SELECT * FROM accounts;
+COMMIT; -- end trxn
