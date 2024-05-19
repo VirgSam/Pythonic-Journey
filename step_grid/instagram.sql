@@ -354,3 +354,12 @@ CREATE MATERIALIZED VIEW weekly_likes AS (
 --- to access Materialized view
 SELECT * 
 FROM weekly_likes;
+
+-- How to refresh Materialized view 
+DELETE FROM posts
+WHERE created_at < '2010-02-01';
+
+SELECT * 
+FROM weekly_likes;
+
+REFRESH MATERIALIZED VIEW weekly_likes;
