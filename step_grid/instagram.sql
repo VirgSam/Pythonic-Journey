@@ -319,3 +319,10 @@ CREATE OR REPLACE VIEW recent_posts AS (
 );
 
 DROP VIEW recent_posts;
+
+-- How to use a materialized view for complex like system stratified by dates
+-- part 1
+SELECT *
+FROM likes
+LEFT JOIN posts ON posts.id = likes.post_id
+LEFT JOIN comments ON comments.id = likes.comment_id;
