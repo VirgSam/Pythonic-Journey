@@ -94,6 +94,12 @@ CREATE TABLE followers (
 	UNIQUE(leader_id,follower_id)	
 );
 
+CREATE TABLE accounts (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(20) NOT NULL,
+	balance INTEGER NOT NULL
+);
+
 -- Practice query
 /* Join the users and post table
    Show the username of use id 200 and the
@@ -363,3 +369,5 @@ SELECT *
 FROM weekly_likes;
 
 REFRESH MATERIALIZED VIEW weekly_likes;
+
+--- Concurrency and Transactions
