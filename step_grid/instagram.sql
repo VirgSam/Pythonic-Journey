@@ -389,3 +389,7 @@ WHERE name = 'Gia';
 
 SELECT * FROM accounts;
 COMMIT; -- end trxn
+
+-- part 2
+UPDATE accounts
+SET balance = 100;
