@@ -393,3 +393,8 @@ COMMIT; -- end trxn
 -- part 2
 UPDATE accounts
 SET balance = 100;
+BEGIN; -- begin trxn
+UPDATE accounts
+SET balance = balance - 50
+WHERE name = 'Alyson';
+-- when closing the window in pgsql dashboard a rollback msg popup was noted
