@@ -397,4 +397,4 @@ BEGIN; -- begin trxn
 UPDATE accounts
 SET balance = balance - 50
 WHERE name = 'Alyson';
--- when closing the window in pgsql dashboard a rollback msg popup was noted
+-- when closing the window in pgsql dashboard a rollback msg popup was noticed
